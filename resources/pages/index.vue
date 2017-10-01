@@ -1,68 +1,57 @@
 <template>
     <section class="container">
         <div>
-            <logo/>
 
-            <h1 class="title">
-                {{ name }}
-            </h1>
+            <shows :events="events"/>
 
-            <h2 class="subtitle">
-                {{ description }}
-            </h2>
-
-            <ul>
-                <li
-                    v-for="event in upcomingEvents"
-                >
-                    {{ event.venue.name }}
-                </li>
-            </ul>
+            <social-links :links="socialLinks"/>
+            <footer-links :links="footerLinks"/>
 
         </div>
     </section>
 </template>
 
 <script>
-    import Logo from '~/components/Logo.vue'
     import axios from 'axios'
-    import moment from 'moment'
+    import {createClient} from 'contentful'
+
+    import Shows from '~/components/Shows.vue'
+    import FooterLinks from '~/components/FooterLinks.vue'
+    import SocialLinks from '~/components/SocialLinks.vue'
 
     export default {
 
         data() {
-            return {
-                name: 'hoi',
-                description: 'hoi',
-            }
+            return {}
         },
 
         components: {
-            Logo
+            Shows,
+            FooterLinks,
+            SocialLinks
         },
 
         methods: {
         },
 
-        computed: {
-            upcomingEvents() {
-                return this.events.filter(function (event) {
-                    return moment(event.datetime).isAfter(moment())
-                });
-            }
-        },
+        async asyncData(context) {
 
-        asyncData(context) {
-            return axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=pablonouvelle').then(json => {
-                let events = json.data;
-                events.push({
-                    datetime: '2017-10-01T15:43:00',
-                    venue: {
-                        name: 'test'
-                    }
-                })
-                return { events: json.data }
+            const client = createClient({
+                space: process.env.CONTENTFUL_SPACE,
+                accessToken: process.env.CONTENTFUL_TOKEN
             })
+
+            let events = await axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.APP_ID);
+            let footerLinks = await client.getEntries({'content_type': 'footerLink'})
+            let socialLinks = await client.getEntries({'content_type': 'socialLinks'})
+            let spotifyLink = await client.getEntries({'content_type': 'spotifyLink', 'limit': 1})
+
+            return {
+                events: events.data,
+                socialLinks: socialLinks.items,
+                footerLinks: footerLinks.items,
+                spotifyLink: spotifyLink.items[0],
+            };
         }
     }
 </script>
