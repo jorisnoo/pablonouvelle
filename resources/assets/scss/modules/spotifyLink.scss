@@ -12,7 +12,7 @@ $module-name: 'spotifyLink';
 }
 
 .spotifyLink-title {
-    @include font-medium;
+    @include font-large;
     white-space: nowrap;
     text-align: center;
 }
@@ -30,14 +30,22 @@ $module-name: 'spotifyLink';
     text-align: center;
     padding: 14px 0 12px;
     margin: 1.4em auto;
+
+    &:hover {
+        border: 1px solid $c-text;
+        .spotifyLink-play {
+            padding-left: 24px;
+        }
+    }
 }
 
 .spotifyLink-play {
     background-image: url(/images/play.svg);
     background-repeat: no-repeat;
-    background-position: left top 2px;
+    background-position: left top 1px;
     display: inline-block;
     padding-left: 34px;
+    transition: all 0.2s ease;
 }
 
 .spotifyLink-link {
