@@ -2,10 +2,14 @@
     <section class="container">
         <div>
 
-            <shows :events="events"/>
+            <logo></logo>
 
-            <social-links :links="socialLinks"/>
-            <footer-links :links="footerLinks"/>
+            <spotify-link :link="spotifyLink"></spotify-link>
+
+            <shows :events="events"></shows>
+
+            <social-links :links="socialLinks"></social-links>
+            <footer-links :links="footerLinks"></footer-links>
 
         </div>
     </section>
@@ -15,8 +19,10 @@
     import axios from 'axios'
     import {createClient} from 'contentful'
 
+    import Logo from '~/components/Logo.vue'
     import Shows from '~/components/Shows.vue'
     import FooterLinks from '~/components/FooterLinks.vue'
+    import SpotifyLink from '~/components/SpotifyLink.vue'
     import SocialLinks from '~/components/SocialLinks.vue'
 
     export default {
@@ -26,8 +32,10 @@
         },
 
         components: {
+            Logo,
             Shows,
             FooterLinks,
+            SpotifyLink,
             SocialLinks
         },
 
@@ -50,7 +58,7 @@
                 events: events.data,
                 socialLinks: socialLinks.items,
                 footerLinks: footerLinks.items,
-                spotifyLink: spotifyLink.items[0],
+                spotifyLink: spotifyLink.items[0].fields,
             };
         }
     }

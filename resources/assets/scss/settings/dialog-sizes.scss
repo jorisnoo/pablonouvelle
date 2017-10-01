@@ -32,14 +32,11 @@
 
 // Font Sizes
 $dialog-sizes:
-    (6px tiny)              // size(-1)
-    8px
-    (10px small)
-    14px
-    (16px medium isBase)    // size(0)
-    18px
-    (20px large)
-    24px
-    28px
-    (32px huge)
-    36px;                   // size(1)
+    (15px small)
+    (25px medium isBase)
+    (80px large);
+
+$dialog-sizes-mobile:
+    (15px small)
+    (20px medium isBase)
+    (35px large);

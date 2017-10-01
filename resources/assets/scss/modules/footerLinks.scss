@@ -1,0 +1,13 @@
+$module-name: 'spotifyLink';
+
+@include settings((
+
+));
+
+.spotifyLink {
+    padding: 0 32px;
+    width: 100%;
+    max-width: 310px;
+    display: block;
+    margin: 0 auto;
+}
