@@ -1,8 +1,8 @@
 <template>
     <div>
-        <ul>
+        <ul class="socialLinks">
             <li v-for="link in links">
-                <a :href="link.fields.url">{{ link.fields.title }}</a>
+                <a class="socialLinks-link" :href="link.fields.url">{{ link.fields.title }}</a>
             </li>
         </ul>
     </div>
