@@ -47,6 +47,19 @@
         methods: {
         },
 
+        head() {
+
+            const title = 'Pablo Nouvelle – ' + this.spotifyLink.title + ' (' + this.spotifyLink.subtitle + ')';
+
+            return {
+                meta: [
+                    {name: 'description', content: title},
+                    {name: 'og:description', content: title},
+                    {name: 'twitter:description', content: title},
+                ],
+            }
+        },
+
         async asyncData(context) {
 
             const client = createClient({

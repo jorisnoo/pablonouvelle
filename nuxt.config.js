@@ -13,7 +13,7 @@ module.exports = {
     srcDir: 'resources/',
 
     env: {
-        // baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+        APP_URL: process.env.APP_URL || 'http://localhost:3000',
         CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE || null,
         CONTENTFUL_TOKEN: process.env.CONTENTFUL_TOKEN || null,
         APP_ID: process.env.APP_ID || 'pablonouvelle',
