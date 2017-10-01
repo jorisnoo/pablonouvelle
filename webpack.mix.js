@@ -16,10 +16,10 @@ const { config } = require('./webpack.mix.config');
 mix
 
     // Build Javascript
-    .js('resources/assets/js/app.js', 'public/build/js')
+    // .js('resources/assets/js/app.js', 'public/build/js')
 
     // Extract libraries to vendor.js file
-    .extract(['vue', 'barba.js', 'bugsnag-js', 'lazysizes', 'axios', 'lodash'])
+    // .extract(['vue', 'barba.js', 'bugsnag-js', 'lazysizes', 'axios', 'lodash'])
 
     // Copy assets
     .copyDirectory('resources/assets/fonts', 'public/build/fonts')

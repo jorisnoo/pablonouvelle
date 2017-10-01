@@ -6,8 +6,12 @@
 /node_modules
 /vendor
 
+# nuxt
+.nuxt
+
 # Build folder
 /public/build
+/public/*
 mix-manifest.json
 
 # Uploads folder
