@@ -15,3 +15,14 @@ $font-text: GrotexBETA-Medium, Helvetica, Arial, sans-serif;
 
 // Example Font definitions
 
+@mixin font-medium() {
+    @include fluid-type(phablet, desktop, 20px, 25px, 1.8);
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+@mixin font-small() {
+    @include font-size(15px, 1);
+    font-weight: normal;
+    letter-spacing: 0.03em;
+}

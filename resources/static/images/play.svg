@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="100" transform="translate(-676.000000, -778.000000)" stroke="#FFFFFF">
+            <g id="Group-14" transform="translate(565.000000, 679.000000)">
+                <g id="Group-8" transform="translate(0.000000, 79.000000)">
+                    <g id="Group-2" transform="translate(112.000000, 18.000000)">
+                        <polygon id="Triangle" transform="translate(7.789474, 11.000000) rotate(90.000000) translate(-7.789474, -11.000000) " points="7.78947368 3.21052632 15.7894737 18.7894737 -0.210526316 18.7894737"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

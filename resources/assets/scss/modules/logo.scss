@@ -4,7 +4,16 @@ $module-name: 'logo';
 ));
 
 .logo {
+    @include fluid-type(phablet, desktop, 56px, 88px, 1);
+    margin-top: 1em;
     width: 100%;
+    margin-bottom: 1em;
+    @include mq($from: phablet) {
+        margin-bottom: 0.5em;
+    }
+    @include mq($from: desktop) {
+        margin-bottom: 0;
+    }
 }
 
 .logo img {
@@ -12,4 +21,9 @@ $module-name: 'logo';
     width: 100%;
     margin: 0 auto;
     display: block;
+
+    @include mq($until: phablet) {
+        width: calc(100% + 2 * 81px);
+        margin: 0 -81px;
+    }
 }
