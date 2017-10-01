@@ -1,0 +1,18 @@
+# Config
+.env
+.y7k-cli.yml
+
+# Dependencies
+/node_modules
+/vendor
+
+# Build folder
+/public/build
+mix-manifest.json
+
+# Uploads folder
+/public/storage
+
+# General
+.idea
+.DS_Store
