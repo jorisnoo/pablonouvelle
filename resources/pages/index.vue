@@ -9,7 +9,10 @@
             <shows :events="events"></shows>
 
             <social-links :links="socialLinks"></social-links>
+
             <footer-links :links="footerLinks"></footer-links>
+
+            <mountain></mountain>
 
         </div>
     </section>
@@ -20,6 +23,7 @@
     import {createClient} from 'contentful'
 
     import Logo from '~/components/Logo.vue'
+    import Mountain from '~/components/Mountain.vue'
     import Shows from '~/components/Shows.vue'
     import FooterLinks from '~/components/FooterLinks.vue'
     import SpotifyLink from '~/components/SpotifyLink.vue'
@@ -33,6 +37,7 @@
 
         components: {
             Logo,
+            Mountain,
             Shows,
             FooterLinks,
             SpotifyLink,
@@ -50,8 +55,8 @@
             })
 
             let events = await axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.APP_ID);
-            let footerLinks = await client.getEntries({'content_type': 'footerLink'})
-            let socialLinks = await client.getEntries({'content_type': 'socialLinks'})
+            let footerLinks = await client.getEntries({'content_type': 'footerLink', 'order': 'sys.updatedAt'})
+            let socialLinks = await client.getEntries({'content_type': 'socialLinks', 'order': 'sys.updatedAt'})
             let spotifyLink = await client.getEntries({'content_type': 'spotifyLink', 'limit': 1})
 
             return {

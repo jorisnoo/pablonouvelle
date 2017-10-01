@@ -5,7 +5,7 @@
                 v-for="event in upcomingEvents"
                 class="shows-entry"
             >
-                <a :href="event.url" class="shows-link">
+                <a :href="event.url" class="shows-link" target="_blank">
                     {{ event.datetime | date }} <span class="shows-venue">{{ event.venue.name }}</span> {{ event.venue.city }}
                 </a>
             </li>
@@ -22,10 +22,6 @@
             'events'
         ],
 
-        created() {
-
-        },
-
         filters: {
             date: function (value) {
                 if (!value) return ''
@@ -37,7 +33,7 @@
             upcomingEvents() {
                 if(!this.events) return []
                 return this.events.filter(function (event) {
-                    return moment(event.datetime).isAfter(moment())
+                    return moment(event.datetime).endOf('day').isAfter(moment())
                 });
             }
         },

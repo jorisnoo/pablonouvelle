@@ -13,11 +13,7 @@
 
         props: [
             'links'
-        ],
-
-        created() {
-            console.log(this.links)
-        }
+        ]
 
     }
 </script>
