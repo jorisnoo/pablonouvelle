@@ -16,6 +16,10 @@ module.exports = {
         dir: 'public/',
     },
 
+    plugins: [
+        // '~/plugins/vue-jsonp'
+    ],
+
     /*
     ** Customize the progress bar color
     */
@@ -25,6 +29,7 @@ module.exports = {
     ** Build configuration
     */
     build: {
+
         extend (config, { dev, isClient }) {
             config.module.rules.push({
                 test: /\.scss/,
@@ -32,6 +37,11 @@ module.exports = {
                 exclude: /node_modules/,
                 enforce: 'pre'
             })
-        }
+        },
+
+        vendor: [
+            'axios'
+        ]
+
     }
 }
