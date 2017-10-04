@@ -21,8 +21,8 @@
                     {name: 'og:url', content: process.env.APP_URL},
                     {name: 'og:type', content: 'website'},
                     {name: 'fb:admins', content: 254402907974879},
-                    {name: 'og:image', content: process.env.APP_URL + '/images/clouds.png'},
-                    {name: 'twitter:image', content: process.env.APP_URL + '/images/clouds.png'},
+                    {name: 'og:image', content: '/images/fb.png'},
+                    {name: 'twitter:image', content: '/images/fb.png'},
                     {name: 'theme-color', content: '#ffffff'},
                 ],
                 link: [
