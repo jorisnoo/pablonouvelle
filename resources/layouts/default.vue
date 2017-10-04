@@ -23,9 +23,14 @@
                     {name: 'fb:admins', content: 254402907974879},
                     {name: 'og:image', content: process.env.APP_URL + '/images/clouds.png'},
                     {name: 'twitter:image', content: process.env.APP_URL + '/images/clouds.png'},
+                    {name: 'theme-color', content: '#ffffff'},
                 ],
                 link: [
-                    {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+                    {rel: 'apple-touch-icon', sizes: '180x180', href: '/images/meta/apple-touch-icon.png'},
+                    {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/images/meta/favicon-32x32.png'},
+                    {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/images/meta/favicon-16x16.png'},
+                    {rel: 'manifest', href: '/images/meta/manifest.json'},
+                    {rel: 'mask-icon', href: '/images/meta/safari-pinned-tab.svg', color: '#000000'},
                 ]
             }
         }
