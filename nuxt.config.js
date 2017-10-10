@@ -17,6 +17,7 @@ module.exports = {
         CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE || null,
         CONTENTFUL_TOKEN: process.env.CONTENTFUL_TOKEN || null,
         APP_ID: process.env.APP_ID || 'pablonouvelle',
+        PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     },
 
     generate: {
@@ -24,7 +25,7 @@ module.exports = {
     },
 
     plugins: [
-        // '~/plugins/axios'
+        { src: '~/plugins/prism', ssr: false }
     ],
 
     modules: [

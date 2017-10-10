@@ -31,7 +31,10 @@
                     {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/images/meta/favicon-16x16.png'},
                     {rel: 'manifest', href: '/images/meta/manifest.json'},
                     {rel: 'mask-icon', href: '/images/meta/safari-pinned-tab.svg', color: '#000000'},
-                ]
+                ],
+//                script: [
+//                    { src: '/prism.js' }
+//                ],
             }
         }
     }
