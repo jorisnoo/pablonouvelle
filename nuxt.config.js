@@ -24,12 +24,18 @@ module.exports = {
         dir: 'public/',
     },
 
-    plugins: [
-        { src: '~/plugins/prism', ssr: false }
-    ],
+    // plugins: [
+    // { src: '~/plugins/prism', ssr: false }
+    // ],
 
     modules: [
-        '@nuxtjs/dotenv'
+        '@nuxtjs/dotenv',
+        ['nuxt-piwik', {
+            piwikUrl: '//prism.y7k.com/',
+            siteId: 17,
+            trackerUrl: '//prism.y7k.com/' + 'js/',
+            scriptUrl: '//prism.y7k.com/' + 'js/'
+        }],
     ],
 
     /*
@@ -42,7 +48,7 @@ module.exports = {
     */
     build: {
 
-        extend (config, { dev, isClient }) {
+        extend(config, {dev, isClient}) {
             config.module.rules.push({
                 test: /\.scss/,
                 loader: 'import-glob',
