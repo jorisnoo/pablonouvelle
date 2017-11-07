@@ -29,13 +29,13 @@ module.exports = {
     // ],
 
     modules: [
-        // ['@nuxtjs/dotenv'],
         ['nuxt-piwik', {
             piwikUrl: '//prism.y7k.com/',
             siteId: 17,
             trackerUrl: '//prism.y7k.com/' + 'js/',
             scriptUrl: '//prism.y7k.com/' + 'js/'
         }],
+        ['@nuxtjs/dotenv'],
     ],
 
     /*
