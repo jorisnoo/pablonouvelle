@@ -35,7 +35,7 @@ module.exports = {
             trackerUrl: '//prism.y7k.com/' + 'js/',
             scriptUrl: '//prism.y7k.com/' + 'js/'
         }],
-        ['@nuxtjs/dotenv'],
+        ['@nuxtjs/dotenv'] // Must be at the bottom for now
     ],
 
     /*
