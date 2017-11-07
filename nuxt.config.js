@@ -29,7 +29,7 @@ module.exports = {
     // ],
 
     modules: [
-        ['@nuxtjs/dotenv'],
+        // ['@nuxtjs/dotenv'],
         ['nuxt-piwik', {
             piwikUrl: '//prism.y7k.com/',
             siteId: 17,
