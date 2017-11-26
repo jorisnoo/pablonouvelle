@@ -1,22 +1,4 @@
-<template>
-    <section class="container">
-        <div>
 
-            <logo></logo>
-
-            <spotify-link :link="spotifyLink"></spotify-link>
-
-            <shows :events="events"></shows>
-
-            <social-links :links="socialLinks"></social-links>
-
-            <footer-links :links="footerLinks"></footer-links>
-
-            <mountain></mountain>
-
-        </div>
-    </section>
-</template>
 
 <script>
     import axios from 'axios'
@@ -26,7 +8,7 @@
     import Mountain from '~/components/Mountain.vue'
     import Shows from '~/components/Shows.vue'
     import FooterLinks from '~/components/FooterLinks.vue'
-    import SpotifyLink from '~/components/SpotifyLink.vue'
+    import SpotifyLinks from '~/components/SpotifyLinks.vue'
     import SocialLinks from '~/components/SocialLinks.vue'
 
     export default {
@@ -40,7 +22,7 @@
             Mountain,
             Shows,
             FooterLinks,
-            SpotifyLink,
+            SpotifyLinks,
             SocialLinks
         },
 
@@ -49,7 +31,7 @@
 
         head() {
 
-            const title = 'Pablo Nouvelle – ' + this.spotifyLink.title + ' (' + this.spotifyLink.subtitle + ')';
+            const title = 'Pablo Nouvelle – ' + this.firstSpotifyLink.title + ' (' + this.firstSpotifyLink.subtitle + ')';
 
             return {
                 meta: [
@@ -70,15 +52,36 @@
             let events = await axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.APP_ID);
             let footerLinks = await client.getEntries({'content_type': 'footerLink', 'order': 'sys.updatedAt'})
             let socialLinks = await client.getEntries({'content_type': 'socialLinks', 'order': 'sys.updatedAt'})
-            let spotifyLink = await client.getEntries({'content_type': 'spotifyLink', 'limit': 1})
+            let spotifyLinks = await client.getEntries({'content_type': 'spotifyLink'})
 
             return {
                 events: events.data,
                 socialLinks: socialLinks.items,
                 footerLinks: footerLinks.items,
-                spotifyLink: spotifyLink.items[0].fields,
+                spotifyLinks: spotifyLinks.items,
+                firstSpotifyLink: spotifyLinks.items[0].fields,
             };
         }
     }
 </script>
+
+<template>
+    <section class="container">
+        <div>
+
+            <logo></logo>
+
+            <spotify-links :links="spotifyLinks"></spotify-links>
+
+            <shows :events="events"></shows>
+
+            <social-links :links="socialLinks"></social-links>
+
+            <footer-links :links="footerLinks"></footer-links>
+
+            <mountain></mountain>
+
+        </div>
+    </section>
+</template>
 

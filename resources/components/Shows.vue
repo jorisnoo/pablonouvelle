@@ -1,18 +1,3 @@
-<template>
-    <div>
-        <ul class="shows">
-            <li
-                v-for="event in upcomingEvents"
-                class="shows-entry"
-            >
-                <a :href="event.url" class="shows-link" target="_blank">
-                    {{ event.datetime | date }} <span class="shows-venue">{{ event.venue.name }}</span> {{ event.venue.city }}
-                </a>
-            </li>
-        </ul>
-    </div>
-</template>
-
 <script>
     import moment from 'moment'
 
@@ -21,6 +6,10 @@
         props: [
             'events'
         ],
+//
+//        created() {
+//            console.log(this.events);
+//        },
 
         filters: {
             date: function (value) {
@@ -39,3 +28,17 @@
         },
     }
 </script>
+<template>
+    <div>
+        <ul class="shows">
+            <li
+                v-for="event in upcomingEvents"
+                class="shows-entry"
+            >
+                <a :href="event.url" class="shows-link" target="_blank">
+                    {{ event.datetime | date }} <span class="shows-venue">{{ event.venue.name }}</span> {{ event.venue.city }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</template>

@@ -1,29 +1,37 @@
-$module-name: 'spotifyLink';
+$module-name: 'spotifyLinks';
 
 @include settings((
 
 ));
 
-.spotifyLink {
+.spotifyLinks {
     padding: 0 32px;
     width: 100%;
     display: block;
     margin: 0 auto;
 }
 
-.spotifyLink-title {
+
+.spotifyLinks-item {
+    padding-bottom: 32px;
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
+
+.spotifyLinks-title {
     @include font-large;
     white-space: nowrap;
     text-align: center;
 }
 
-.spotifyLink-subtitle {
+.spotifyLinks-subtitle {
     @include font-small;
     white-space: nowrap;
     text-align: center;
 }
 
-.spotifyLink-button {
+.spotifyLinks-button {
     max-width: 310px;
     border: 1px solid $c-text;
     display: block;
@@ -33,13 +41,13 @@ $module-name: 'spotifyLink';
 
     &:hover {
         border: 1px solid $c-text;
-        .spotifyLink-play {
+        .spotifyLinks-play {
             padding-left: 24px;
         }
     }
 }
 
-.spotifyLink-play {
+.spotifyLinks-play {
     background-image: url(/images/play.svg);
     background-repeat: no-repeat;
     background-position: left top 1px;
@@ -48,7 +56,7 @@ $module-name: 'spotifyLink';
     transition: all 0.2s ease;
 }
 
-.spotifyLink-link {
+.spotifyLinks-link {
     @include font-small;
     margin: 0 auto;
     text-transform: none;
