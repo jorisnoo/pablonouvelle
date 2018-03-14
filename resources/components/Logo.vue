@@ -1,5 +1,5 @@
 <template>
     <div class="logo">
-        <img src="/images/pablonouvelle.png" alt="Pablo Nouvelle">
+        <img src="/images/pablonouvelle.svg" alt="Pablo Nouvelle">
     </div>
 </template>

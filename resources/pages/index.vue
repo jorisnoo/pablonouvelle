@@ -8,6 +8,7 @@
     import FooterLinks from '~/components/FooterLinks.vue'
     import SpotifyLinks from '~/components/SpotifyLinks.vue'
     import SocialLinks from '~/components/SocialLinks.vue'
+    import Album from '~/components/Album.vue'
 
     export default {
 
@@ -21,14 +22,15 @@
             Shows,
             FooterLinks,
             SpotifyLinks,
-            SocialLinks
+            SocialLinks,
+            Album
         },
 
         methods: {},
 
         head() {
 
-            const title = 'Pablo Nouvelle – WIRED';
+            const title = 'Pablo Nouvelle – Wired - New Album Out Now';
 
             return {
                 meta: [
@@ -49,6 +51,7 @@
             let events = await axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.APP_ID);
             let footerLinks = await client.getEntries({'content_type': 'footerLink', 'order': 'sys.updatedAt'})
             let socialLinks = await client.getEntries({'content_type': 'socialLinks', 'order': 'sys.updatedAt'})
+            let albumLinks = await client.getEntries({'content_type': 'albumLink', 'order': 'sys.updatedAt'})
             let spotifyLinks = await client.getEntries({'content_type': 'spotifyLink'})
 
             let eventsData = [];
@@ -66,7 +69,7 @@
                 socialLinks: socialLinks.items,
                 footerLinks: footerLinks.items,
                 spotifyLinks: spotifyLinks.items,
-                firstSpotifyLink: spotifyLinks.items[0].fields,
+                albumLinks: albumLinks.items,
             };
         }
     }
@@ -78,7 +81,9 @@
 
             <logo></logo>
 
-            <spotify-links :links="spotifyLinks"></spotify-links>
+            <album :links="albumLinks"></album>
+
+            <!--<spotify-links :links="spotifyLinks"></spotify-links>-->
 
             <shows :events="events"></shows>
 
