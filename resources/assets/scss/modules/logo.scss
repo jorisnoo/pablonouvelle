@@ -17,13 +17,13 @@ $module-name: 'logo';
 }
 
 .logo img {
-    max-width: 1200px;
-    width: 100%;
+    max-width: 945px;
+    width: 80%;
     margin: 0 auto;
     display: block;
 
     @include mq($until: phablet) {
-        width: calc(100% + 2 * 81px);
-        margin: 0 -81px;
+        //width: calc(100% + 2 * 81px);
+        //margin: 0 -81px;
     }
 }

@@ -10,10 +10,6 @@ $module-name: 'footerLinks';
     display: block;
     @include font-small;
     line-height: 1.4;
-    margin: 23px 0;
-    @include mq($from: phablet) {
-        margin: 40px 0;
-    }
 }
 
 .footerLinks-entry {

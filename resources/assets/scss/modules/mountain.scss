@@ -4,8 +4,8 @@ $module-name: 'mountain';
 ));
 
 .mountain {
-    @include fluid-type(phablet, desktop, 56px, 88px, 1);
-    //margin-top: 1em;
+    @include fluid-type(phablet, desktop, 65px, 88px, 1);
+    margin-top: 1.25em;
     width: 100%;
 }
 

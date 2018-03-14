@@ -7,7 +7,7 @@ $module-name: 'shows';
     width: 100%;
     padding: 0 32px;
     list-style: none;
-    margin: 70px 0;
+    margin: 90px 0;
     @include mq($from: tablet) {
         margin: 170px 0;
     }

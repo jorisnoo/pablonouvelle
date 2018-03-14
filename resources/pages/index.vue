@@ -28,7 +28,7 @@
 
         head() {
 
-            const title = 'Pablo Nouvelle – ' + this.firstSpotifyLink.title + ' (' + this.firstSpotifyLink.subtitle + ')';
+            const title = 'Pablo Nouvelle – WIRED';
 
             return {
                 meta: [
@@ -82,7 +82,7 @@
 
             <shows :events="events"></shows>
 
-            <social-links :links="socialLinks"></social-links>
+            <!--<social-links :links="socialLinks"></social-links>-->
 
             <footer-links :links="footerLinks"></footer-links>
 
