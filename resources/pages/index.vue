@@ -9,6 +9,7 @@
     import SpotifyLinks from '~/components/SpotifyLinks.vue'
     import SocialLinks from '~/components/SocialLinks.vue'
     import Album from '~/components/Album.vue'
+    import SocialLogos from '~/components/SocialLogos.vue'
 
     export default {
 
@@ -23,7 +24,8 @@
             FooterLinks,
             SpotifyLinks,
             SocialLinks,
-            Album
+            Album,
+            SocialLogos
         },
 
         methods: {},
