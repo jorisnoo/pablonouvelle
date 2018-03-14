@@ -1,5 +1,3 @@
-
-
 <script>
     import axios from 'axios'
     import {createClient} from 'contentful'
@@ -26,8 +24,7 @@
             SocialLinks
         },
 
-        methods: {
-        },
+        methods: {},
 
         head() {
 
@@ -54,8 +51,18 @@
             let socialLinks = await client.getEntries({'content_type': 'socialLinks', 'order': 'sys.updatedAt'})
             let spotifyLinks = await client.getEntries({'content_type': 'spotifyLink'})
 
+            let eventsData = [];
+
+            for (let i = 0; i < events.data.length; i++) {
+                eventsData.push({
+                    url: events.data[i].url,
+                    venue: events.data[i].venue,
+                    datetime: events.data[i].datetime,
+                });
+            };
+
             return {
-                events: events.data,
+                events: eventsData,
                 socialLinks: socialLinks.items,
                 footerLinks: footerLinks.items,
                 spotifyLinks: spotifyLinks.items,
