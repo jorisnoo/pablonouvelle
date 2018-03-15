@@ -1,8 +1,6 @@
 
-
 .album {
     width: 100%;
-
 }
 
 .album-cover {
@@ -28,7 +26,6 @@
     margin: 0;
     margin-top: 2.8em;
     @include font-small;
-    line-height: 1.4;
 }
 
 .album-link {
@@ -37,11 +34,5 @@
     margin: 0 auto;
     text-transform: none;
     text-align: center;
-
-    //@include mq($until: phablet) {
-    //    &:before {
-    //        content: ' ';
-    //        display: block;
-    //    }
-    //}
+    margin-bottom: 1.1em;
 }

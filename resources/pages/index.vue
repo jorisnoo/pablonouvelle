@@ -52,7 +52,7 @@
 
             let events = await axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.APP_ID);
             let footerLinks = await client.getEntries({'content_type': 'footerLink', 'order': 'sys.updatedAt'})
-            let socialLinks = await client.getEntries({'content_type': 'socialLinks', 'order': 'sys.updatedAt'})
+            let socialLinks = await client.getEntries({'content_type': 'socialLinks', 'order': '-sys.updatedAt'})
             let albumLinks = await client.getEntries({'content_type': 'albumLink', 'order': 'sys.updatedAt'})
             let spotifyLinks = await client.getEntries({'content_type': 'spotifyLink'})
 
