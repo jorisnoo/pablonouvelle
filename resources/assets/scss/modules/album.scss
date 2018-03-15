@@ -10,6 +10,15 @@
     max-width: 640px;
     width: 70%;
     margin: 0 auto;
+    border: none;
+
+    &:hover, &:focus, &:visited {
+        border: none;
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 .album-links {

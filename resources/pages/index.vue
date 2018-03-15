@@ -81,6 +81,8 @@
     <section class="container">
         <div>
 
+            <social-logos :links="socialLinks"></social-logos>
+
             <logo></logo>
 
             <album :links="albumLinks"></album>

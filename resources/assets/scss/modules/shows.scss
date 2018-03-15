@@ -25,8 +25,8 @@ $module-name: 'shows';
     @include font-medium;
     text-align: center;
 
-    &:hover {
-        border-bottom: none;
+    &:hover, &:focus, &:visited {
+        border: none;
     }
 }
 
