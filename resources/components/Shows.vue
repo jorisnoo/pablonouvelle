@@ -4,6 +4,12 @@
 
     export default {
 
+        data() {
+            return {
+                fEvents: []
+            }
+        },
+
         props: [
             'events'
         ],
@@ -11,6 +17,12 @@
 //        created() {
 //            console.log(this.events);
 //        },
+
+        mounted() {
+            this.$nextTick(() => {
+                this.fEvents = _.filter(this.events, (event) => { return this.eventIsUpcoming(event); });
+            });
+        },
 
         filters: {
             date: function (value) {
@@ -36,7 +48,7 @@
     <div>
         <ul class="shows">
             <li
-                v-for="event in filteredEvents"
+                v-for="event in fEvents"
                 class="shows-entry"
             >
                 <a :href="event.url" class="shows-link" target="_blank">

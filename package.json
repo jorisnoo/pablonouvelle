@@ -10,7 +10,8 @@
     "watch": "nuxt",
     "prod": "npm run production",
     "production": "npm run generate",
-    "generate": "NODE_ENV=production nuxt generate"
+    "generate": "NODE_ENV=production nuxt generate",
+    "build": "NODE_ENV=production nuxt build"
   },
   "devDependencies": {
     "dotenv": "^4.0.0",

@@ -73,7 +73,12 @@
                 spotifyLinks: spotifyLinks.items,
                 albumLinks: albumLinks.items,
             };
-        }
+        },
+
+        // created() {
+        //     console.log('hello index', Date.now());
+        // }
+
     }
 </script>
 
