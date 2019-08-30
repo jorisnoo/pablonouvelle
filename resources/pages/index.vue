@@ -50,7 +50,7 @@
                 accessToken: process.env.CONTENTFUL_TOKEN
             })
 
-            let events = await axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.APP_ID);
+            // let events = await axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.APP_ID);
             let footerLinks = await client.getEntries({'content_type': 'footerLink', 'order': 'sys.updatedAt'})
             let socialLinks = await client.getEntries({'content_type': 'socialLinks', 'order': '-sys.updatedAt'})
             let albumLinks = await client.getEntries({'content_type': 'albumLink', 'order': 'sys.updatedAt'})
@@ -58,13 +58,13 @@
 
             let eventsData = [];
 
-            for (let i = 0; i < events.data.length; i++) {
-                eventsData.push({
-                    url: events.data[i].url,
-                    venue: events.data[i].venue,
-                    datetime: events.data[i].datetime,
-                });
-            };
+            // for (let i = 0; i < events.data.length; i++) {
+            //     eventsData.push({
+            //         url: events.data[i].url,
+            //         venue: events.data[i].venue,
+            //         datetime: events.data[i].datetime,
+            //     });
+            // };
 
             return {
                 events: eventsData,
