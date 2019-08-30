@@ -29,11 +29,17 @@ module.exports = {
     // ],
 
     modules: [
-        ['nuxt-piwik', {
-            piwikUrl: '//prism.y7k.com/',
-            siteId: 17,
-            trackerUrl: '//prism.y7k.com/' + 'js/',
-            scriptUrl: '//prism.y7k.com/' + 'js/'
+        // ['nuxt-piwik', {
+        //     piwikUrl: '//prism.y7k.com/',
+        //     siteId: 17,
+        //     trackerUrl: '//prism.y7k.com/' + 'js/',
+        //     scriptUrl: '//prism.y7k.com/' + 'js/'
+        // }],
+        ['nuxt-facebook-pixel-module', {
+            /* module options */
+            track: 'PageView',
+            pixelId: '412247019422885',
+            disabled: false
         }],
         ['@nuxtjs/dotenv'] // Must be at the bottom for now
     ],
