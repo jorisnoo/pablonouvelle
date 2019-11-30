@@ -1,0 +1,53 @@
+$module-name: 'socialLinks';
+
+@include settings((
+
+));
+
+.socialLinks {
+    max-width: 310px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq($from: tablet) {
+        max-width: 682px;
+    }
+}
+
+.socialLinks li {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    width: 308px;
+    display: block;
+    border: 1px solid $c-text;
+    border-bottom: none;
+
+    &:last-of-type {
+        border: 1px solid $c-text;
+    }
+
+    @include mq($from: tablet) {
+        &:nth-last-of-type(2) {
+            border: 1px solid $c-text;
+        }
+        &:nth-of-type(2n) {
+            border-left: none;
+        }
+    }
+
+}
+
+.socialLinks-link {
+    @include font-small;
+    border-bottom: none;
+    padding: 17px 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    &:hover {
+        border-bottom: none;
+    }
+}

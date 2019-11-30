@@ -1,0 +1,18 @@
+$module-name: 'logo';
+
+@include settings((
+));
+
+.logo {
+    @include fluid-type(phablet, desktop, 56px, 88px, 1);
+    width: 100%;
+    margin: 1.5em 0 2.375em 0;
+    color: #000;
+}
+
+.logo img {
+    max-width: 945px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
