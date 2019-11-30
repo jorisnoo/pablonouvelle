@@ -7,10 +7,10 @@
  */
 
 // LIBRARIES
-@import "../../../node_modules/dialog-size/dist/dialog-size";
-@import "../../../node_modules/dialog-settings/dist/dialog-settings";
-@import "../../../node_modules/sass-mq/mq";
-@import "../../../node_modules/susy/sass/susy";
+@import "../../node_modules/dialog-size/dist/dialog-size";
+//@import "../../node_modules/dialog-settings/dist/dialog-settings";
+@import "../../node_modules/sass-mq/mq";
+@import "../../node_modules/susy/sass/susy";
 
 // SETTINGS
 @import "settings/breakpoints";
@@ -25,7 +25,20 @@
 @import "settings/z-indexes";
 
 // TOOLS
-@import "tools/**/*.scss";
+@import "tools/aspect-ratio";
+@import "tools/clearfix";
+@import "tools/container";
+@import "tools/fluid-type";
+@import "tools/font-face";
+@import "tools/font-size";
+@import "tools/grid";
+@import "tools/hidden";
+@import "tools/object-fit";
+@import "tools/rem";
+@import "tools/responsive-property";
+@import "tools/spacings";
+@import "tools/unlink";
+@import "tools/z-index";
 
 // GENERIC
 @import "generic/box-sizing";
@@ -36,19 +49,29 @@
 @import "generic/print";
 
 // ELEMENTS
-@import "elements/**/*.scss";
+@import "elements/cloak";
+@import "elements/images";
+@import "elements/links";
+@import "elements/outline";
+@import "elements/tables";
 
-// LAYOUTS
-@import "layouts/**/*.scss";
 
 // MODULES
-@import "modules/**/*.scss";
+@import "modules/album";
+@import "modules/footerLinks";
+@import "modules/logo";
+@import "modules/mountain";
+@import "modules/shows";
+@import "modules/socialLinks";
+@import "modules/socialLogos";
+@import "modules/spotifyLinks";
 
-// ANIMATIONS
-@import "animations/**/*.scss";
 
 // UTILITIES
-@import "utilities/**/*.scss";
+@import "utilities/clearfix";
+@import "utilities/containers";
+@import "utilities/headings";
+@import "utilities/hide";
 
 // SHAME ON YOU
 @import "hacks/shame";

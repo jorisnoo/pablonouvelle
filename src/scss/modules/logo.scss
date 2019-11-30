@@ -1,7 +1,7 @@
-$module-name: 'logo';
-
-@include settings((
-));
+//$module-name: 'logo';
+//
+//@include settings((
+//));
 
 .logo {
     @include fluid-type(phablet, desktop, 56px, 88px, 1);
