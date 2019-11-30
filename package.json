@@ -1,39 +1,43 @@
 {
-  "name": "pablonouvelle",
-  "license": "proprietary",
-  "private": true,
-  "author": "Joris Noordermeer",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html -d public",
-    "build": "parcel build src/index.html -d public",
-    "watch": "parcel watch src/index.html -d public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jorisnoo/pablonouvelle.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jorisnoo/pablonouvelle/issues"
-  },
-  "homepage": "https://pablonouvelle.com",
-  "volta": {
-    "node": "12.13.1"
-  },
-  "dependencies": {
-    "dialog-size": "^2.0.0",
-    "moment": "^2.24.0",
-    "sass-mq": "^3.3.2",
-    "susy": "^2.2.14",
-    "underscore": "^1.9.1",
-    "vue": "^2.6.10",
-    "vue-hot-reload-api": "^2.3.4"
-  },
-  "devDependencies": {
-    "@vue/component-compiler-utils": "^3.0.2",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6",
-    "sass": "^1.23.7",
-    "vue-template-compiler": "^2.6.10"
-  }
+    "name": "pablonouvelle",
+    "license": "proprietary",
+    "private": true,
+    "author": "Joris Noordermeer",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "parcel src/index.html -d public",
+        "build": "parcel build src/index.html -d public",
+        "watch": "parcel watch src/index.html -d public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jorisnoo/pablonouvelle.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jorisnoo/pablonouvelle/issues"
+    },
+    "homepage": "https://pablonouvelle.com",
+    "volta": {
+        "node": "12.13.1"
+    },
+    "staticFiles": {
+        "staticPath": "src/static"
+    },
+    "dependencies": {
+        "dialog-size": "^2.0.0",
+        "moment": "^2.24.0",
+        "sass-mq": "^3.3.2",
+        "susy": "^2.2.14",
+        "underscore": "^1.9.1",
+        "vue": "^2.6.10",
+        "vue-hot-reload-api": "^2.3.4"
+    },
+    "devDependencies": {
+        "@vue/component-compiler-utils": "^3.0.2",
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-clean-dist": "0.0.6",
+        "parcel-plugin-static-files-copy": "^2.2.1",
+        "sass": "^1.23.7",
+        "vue-template-compiler": "^2.6.10"
+    }
 }
