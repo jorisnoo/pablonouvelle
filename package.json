@@ -1,0 +1,20 @@
+{
+  "name": "pablonouvelle",
+  "license": "proprietary",
+  "private": true,
+  "author": "Joris Noordermeer",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorisnoo/pablonouvelle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jorisnoo/pablonouvelle/issues"
+  },
+  "homepage": "https://github.com/jorisnoo/pablonouvelle#readme",
+  "volta": {
+    "node": "12.13.1"
+  }
+}
