@@ -25,6 +25,8 @@
     import SocialLogos from "./components/SocialLogos";
     import SpotifyLinks from "./components/SpotifyLinks";
 
+    import { content, data } from '../content.md';
+
     export default {
         name: "App",
         components: {
@@ -47,6 +49,10 @@
                 ]
             }
         },
+
+        mounted() {
+            console.log(content, data)
+        }
 
     }
 </script>
