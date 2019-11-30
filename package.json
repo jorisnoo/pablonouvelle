@@ -22,11 +22,18 @@
   },
   "dependencies": {
     "dialog-size": "^2.0.0",
+    "moment": "^2.24.0",
     "sass-mq": "^3.3.2",
-    "susy": "^2.2.14"
+    "susy": "^2.2.14",
+    "underscore": "^1.9.1",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.2",
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.23.7"
+    "parcel-plugin-clean-dist": "0.0.6",
+    "sass": "^1.23.7",
+    "vue-template-compiler": "^2.6.10"
   }
 }
