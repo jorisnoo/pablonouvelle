@@ -26,6 +26,7 @@
 </script>
 <template>
     <div class="album">
+<!--        TODO: use lazysizes -->
         <a :href="link" target="_blank" class="album-cover" >
             <img :src="'./images/album/' + cover" :alt="name">
         </a>
