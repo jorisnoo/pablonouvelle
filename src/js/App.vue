@@ -1,6 +1,11 @@
 <template>
     <section class="container">
         <div>
+
+            <social-logos :links="socialLinks">
+<!--                do not self- close tag -->
+            </social-logos>
+
             <logo></logo>
 
             <album
@@ -36,7 +41,8 @@
 
         data() {
             return {
-                albums: data.albums
+                albums: JSON.parse(JSON.stringify(data.albums)),
+                socialLinks: JSON.parse(JSON.stringify(data.socialLinks)),
             }
         },
 
@@ -45,6 +51,9 @@
             // .then(events => {
             //     console.log(events)
             // });
+
+            console.log(data);
+            // console.log()
         },
 
     }

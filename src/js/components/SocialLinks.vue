@@ -2,9 +2,12 @@
 <script>
     export default {
 
-        props: [
-            'links'
-        ]
+        props: {
+            links: {
+                type: Array,
+                default: () => [],
+            },
+        }
 
     }
 </script>
@@ -12,7 +15,7 @@
     <div>
         <ul class="socialLinks">
             <li v-for="link in links">
-                <a class="socialLinks-link" :href="link.fields.url">{{ link.fields.title }}</a>
+                <a class="socialLinks-link" :href="link.url">{{ link.title }}</a>
             </li>
         </ul>
     </div>
