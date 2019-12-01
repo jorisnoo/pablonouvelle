@@ -1,0 +1,39 @@
+
+.album {
+    width: 100%;
+}
+
+.album-cover {
+    display: block;
+    max-width: 640px;
+    width: 70%;
+    margin: 0 auto 2.4em;
+    border: none;
+    background-color: #000000;
+
+    &:hover, &:focus, &:visited {
+        border: none;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.album-links {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2.8em;
+    @include font-small;
+}
+
+.album-link {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 1.1em;
+}
