@@ -25,7 +25,7 @@
     import SocialLogos from "./components/SocialLogos";
     import SpotifyLinks from "./components/SpotifyLinks";
 
-    import { content, data } from '../content.md';
+    import { data } from '../content.md';
 
     export default {
         name: "App",
@@ -35,24 +35,9 @@
 
         data() {
             return {
-                albums: [
-                    {
-                        'name': 'Atlas Internet Cafe',
-                        'cover': '01_atlas_internet_cafe.jpg',
-                        'link': 'https://google.com'
-                    },
-                    {
-                        'name': 'Piano Pieces',
-                        'cover': '02_piano_pieces.png',
-                        'link': 'https://google.com'
-                    },
-                ]
+                albums: data.albums
             }
         },
-
-        mounted() {
-            console.log(content, data)
-        }
 
     }
 </script>
