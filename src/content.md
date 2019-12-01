@@ -25,6 +25,7 @@ music:
       spotify_link: https://open.spotify.com/album/3hQ8w9XozWUQpQttAUvbEa
       itunes_link: https://itunes.apple.com/ch/album/i-want-for-nothing-feat-favela-single/id1276654342
       all_music_link: https://open.spotify.com/artist/2OIJq28O1lXrZ2x3NGSk8P
+      hide: false
     - title: Sunshine In Stereo
       subtitle: feat. Andreya Triana
       spotify_link: https://open.spotify.com/track/2MmOpjqMZzxi8wDsFHOaVs?si=byiKoKOTQ9a5LuhgNdcoyA

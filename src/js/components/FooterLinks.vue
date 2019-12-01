@@ -2,9 +2,12 @@
 <script>
     export default {
 
-        props: [
-            'links'
-        ],
+        props: {
+            links: {
+                type: Array,
+                default: () => [],
+            },
+        }
 
     }
 </script>
@@ -13,7 +16,7 @@
     <div>
         <ul class="footerLinks">
             <li class="footerLinks-entry" v-for="link in links">
-                {{ link.fields.title }} <a :href="(link.fields.email) ? 'mailto:' + link.fields.email : link.fields.url" target="_blank" class="footerLinks-link">{{ (link.fields.linkText) ? link.fields.linkText : ((link.fields.email) ? link.fields.email : link.fields.url) }}</a>
+                {{ link.title }} <a :href="(link.email) ? 'mailto:' + link.email : link.url" target="_blank" class="footerLinks-link">{{ (link.text) ? link.text : ((link.email) ? link.email : link.url) }}</a>
             </li>
         </ul>
     </div>

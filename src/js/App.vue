@@ -2,9 +2,7 @@
     <section class="container">
         <div>
 
-            <social-logos :links="socialLinks">
-<!--                do not self- close tag -->
-            </social-logos>
+            <social-logos :links="socialmedia"></social-logos>
 
             <logo></logo>
 
@@ -15,6 +13,15 @@
                 :cover="album.cover"
                 :key="album.name"
             ></album>
+
+<!--            <spotify-links :links="music"></spotify-links>-->
+
+<!--            <shows :events="events"></shows>-->
+
+<!--            <social-links :links="socialmedia"></social-links>-->
+
+
+            <footer-links :links="footer"></footer-links>
 
             <mountain></mountain>
 
@@ -43,8 +50,11 @@
 
         data() {
             return {
+                events: [],
                 albums: JSON.parse(JSON.stringify(data.albums)),
-                socialLinks: JSON.parse(JSON.stringify(data.socialmedia)),
+                socialmedia: JSON.parse(JSON.stringify(data.socialmedia)),
+                music: JSON.parse(JSON.stringify(data.music)),
+                footer: JSON.parse(JSON.stringify(data.footer)),
             }
         },
 
@@ -54,7 +64,7 @@
             //     console.log(events)
             // });
 
-            console.log(data);
+            // console.log(data);
             // console.log()
         },
 
