@@ -16,6 +16,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
     import Album from "./components/Album";
     import FooterLinks from "./components/FooterLinks";
     import Logo from "./components/Logo";
@@ -37,6 +38,13 @@
             return {
                 albums: data.albums
             }
+        },
+
+        created() {
+            // axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=pablonouvelle')
+            // .then(events => {
+            //     console.log(events)
+            // });
         },
 
     }
