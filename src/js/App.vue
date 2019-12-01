@@ -16,6 +16,8 @@
                 :key="album.name"
             ></album>
 
+            <mountain></mountain>
+
         </div>
     </section>
 </template>
@@ -42,7 +44,7 @@
         data() {
             return {
                 albums: JSON.parse(JSON.stringify(data.albums)),
-                socialLinks: JSON.parse(JSON.stringify(data.socialLinks)),
+                socialLinks: JSON.parse(JSON.stringify(data.socialmedia)),
             }
         },
 
