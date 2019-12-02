@@ -28,10 +28,10 @@ albums:
     - name: Heartbeat
       cover: 05_heartbeat.jpg
       link: https://open.spotify.com/album/1C24zCmqBSarOqUwBElLfT?si=Hu-x1IPvRKSQ--uLKBJbDA
-    - name: You Don’t Understand:
+    - name: "You Don’t Understand"
       cover: 06_you_don_t_understand.jpg
       link: https://PabloNouvelle.lnk.to/YDU
-    - name: Pablo Nouvelle:
+    - name: Pablo Nouvelle
       cover: 07_pablo_nouvelle.jpg
       link: https://pablonouvelle.bandcamp.com/album/pablo-nouvelle-2
 footer:
