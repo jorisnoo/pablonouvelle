@@ -4,31 +4,35 @@
         props: {
             link: {
                 type: String,
-                default: '',
+                default: () => '',
             },
             name: {
                 type: String,
-                default: '',
+                default: () => '',
             },
             cover: {
                 type: String,
-                default: '',
+                default: () => '',
             },
         },
-
-        data() {
-            return {
-            }
-        },
-
 
     }
 </script>
 <template>
     <div class="album">
-<!--        TODO: use lazysizes -->
         <a :href="link" target="_blank" class="album-cover" >
-            <img :src="'./images/album/' + cover" :alt="name">
+            <img
+                data-sizes="auto"
+                :data-src="'/images/album/' + cover + '?nf_resize=fit&w=640'"
+                :data-srcset="
+                '/images/album/' + cover + '?nf_resize=fit&w=960 960w, ' +
+                '/images/album/' + cover + '?nf_resize=fit&w=640 640w, ' +
+                '/images/album/' + cover + '?nf_resize=fit&w=480 480w, ' +
+                '/images/album/' + cover + '?nf_resize=fit&w=320 320w'
+                "
+                class="lazyload"
+                :alt="name"
+            />
         </a>
 
 <!--        <ul class="album-links">-->
