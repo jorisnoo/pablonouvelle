@@ -6,6 +6,8 @@
 
             <logo></logo>
 
+            <!--            <shows :events="events"></shows>-->
+
             <album
                 v-for="album in albums"
                 :name="album.name"
@@ -16,10 +18,7 @@
 
 <!--            <spotify-links :links="music"></spotify-links>-->
 
-<!--            <shows :events="events"></shows>-->
-
 <!--            <social-links :links="socialmedia"></social-links>-->
-
 
             <footer-links :links="footer"></footer-links>
 
