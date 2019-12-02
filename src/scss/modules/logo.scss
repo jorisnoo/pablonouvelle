@@ -4,15 +4,25 @@
 //));
 
 .logo {
-    @include fluid-type(phablet, desktop, 56px, 88px, 1);
+    @include fluid-type(phablet, desktop, 56px, 70px, 1);
     width: 100%;
-    margin: 1.5em 0 2.375em 0;
+    margin: 1.5em 0 2em 0;
     color: #000;
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        padding-bottom: 30%;
+    }
+
 }
 
 .logo img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 945px;
     width: 80%;
-    margin: 0 auto;
     display: block;
 }

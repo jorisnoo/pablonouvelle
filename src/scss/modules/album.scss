@@ -26,7 +26,14 @@
         position: absolute;
         display: block;
         width: 100%;
+        opacity: 0;
     }
+
+    img.lazyloaded {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+    }
+
 }
 
 .album-links {

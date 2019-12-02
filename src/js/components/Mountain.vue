@@ -1,6 +1,6 @@
 <template>
     <div class="mountain">
-        <img 
+        <img
             data-sizes="auto"
             :data-src="'/images/mountain.png'"
             :data-srcset="
