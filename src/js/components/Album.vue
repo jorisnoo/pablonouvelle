@@ -23,6 +23,7 @@
         <a :href="link" target="_blank" class="album-cover" >
             <img
                 data-sizes="auto"
+                :data-lowsrc="'/images/album/' + cover + '?nf_resize=fit&w=120'"
                 :data-src="'/images/album/' + cover + '?nf_resize=fit&w=640'"
                 :data-srcset="
                 '/images/album/' + cover + '?nf_resize=fit&w=960 960w, ' +

@@ -10,12 +10,20 @@
     margin: 0 auto 2.4em;
     border: none;
     background-color: #000000;
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
 
     &:hover, &:focus, &:visited {
         border: none;
     }
 
     img {
+        position: absolute;
         display: block;
         width: 100%;
     }
