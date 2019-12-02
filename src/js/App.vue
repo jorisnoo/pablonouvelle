@@ -2,7 +2,7 @@
     <section class="container">
         <div>
 
-            <social-logos :links="socialmedia"></social-logos>
+            <external-logos :links="socialmedia"></external-logos>
 
             <logo></logo>
 
@@ -36,7 +36,7 @@
     import Mountain from "./components/Mountain";
     import Shows from "./components/Shows";
     import SocialLinks from "./components/SocialLinks";
-    import SocialLogos from "./components/SocialLogos";
+    import ExternalLogos from "./components/ExternalLogos";
     import SpotifyLinks from "./components/SpotifyLinks";
 
     import { data } from '../content.md';
@@ -44,7 +44,7 @@
     export default {
         name: "App",
         components: {
-            Album, FooterLinks, Logo, Mountain, Shows, SocialLinks, SocialLogos, SpotifyLinks,
+            Album, FooterLinks, Logo, Mountain, Shows, SocialLinks, ExternalLogos, SpotifyLinks,
         },
 
         data() {
