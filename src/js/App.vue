@@ -6,7 +6,7 @@
 
             <logo></logo>
 
-            <!--            <shows :events="events"></shows>-->
+            <shows :events="events"></shows>
 
             <album
                 v-for="album in albums"
@@ -58,10 +58,15 @@
         },
 
         created() {
-            // axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=pablonouvelle')
-            // .then(events => {
-            //     console.log(events)
-            // });
+            axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.BANDSINTOWN_APP_ID)
+            .then(result => result.data)
+            .then(events => {
+                this.events = events;
+            });
+
+            // let events = require('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.BANDSINTOWN_APP_ID)
+            //
+            // console.log(events);
 
             // console.log(data);
             // console.log()
