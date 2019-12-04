@@ -8,7 +8,7 @@ albums:
       link: https://AWAL.lnk.to/pianopieces
     - name: Wired
       cover: 03_wired.png
-      link: https://ARMAS1335.lnk.to/Wired
+      link: https://pablonouvelle.lnk.to/Wired/
     - name: All I Need
       cover: 04_all_i_need.jpg
       link: https://ArmadaMusic.lnk.to/PNAllINeed
