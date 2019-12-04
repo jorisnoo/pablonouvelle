@@ -39,7 +39,10 @@
     import ExternalLogos from "./components/ExternalLogos";
     import SpotifyLinks from "./components/SpotifyLinks";
 
-    import { data } from '../content.md';
+    import { data as albums } from '../content/albums.md';
+    import { data as socialmedia } from '../content/socialmedia.md';
+    // import { data as music } from '../content/music.md';
+    import { data as footer } from '../content/footer.md';
 
     export default {
         name: "App",
@@ -50,10 +53,10 @@
         data() {
             return {
                 events: [],
-                albums: JSON.parse(JSON.stringify(data.albums)),
-                socialmedia: JSON.parse(JSON.stringify(data.socialmedia)),
-                music: JSON.parse(JSON.stringify(data.music)),
-                footer: JSON.parse(JSON.stringify(data.footer)),
+                albums: JSON.parse(JSON.stringify(albums.albums)),
+                socialmedia: JSON.parse(JSON.stringify(socialmedia.socialmedia)),
+                // music: JSON.parse(JSON.stringify(data.music)),
+                footer: JSON.parse(JSON.stringify(footer.footer)),
             }
         },
 
@@ -63,13 +66,6 @@
             .then(events => {
                 this.events = events;
             });
-
-            // let events = require('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.BANDSINTOWN_APP_ID)
-            //
-            // console.log(events);
-
-            // console.log(data);
-            // console.log()
         },
 
     }
