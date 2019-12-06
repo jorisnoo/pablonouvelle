@@ -27,6 +27,7 @@
         "dialog-size": "^2.0.0",
         "lazysizes": "^5.2.0-beta1",
         "moment": "^2.24.0",
+        "parcel-plugin-purgecss": "^2.1.3",
         "sass-mq": "^3.3.2",
         "susy": "^2.2.14",
         "vue": "^2.6.10"
