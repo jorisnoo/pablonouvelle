@@ -2,7 +2,7 @@
 albums: 
     - name: Atlas Internet Cafe
       cover: 01_atlas_internet_cafe.jpg
-      link: https://aree089.lnk.to/Prelude
+      link: https://pablonouvelle.lnk.to/AIC
     - name: Piano Pieces
       cover: 02_piano_pieces.png
       link: https://AWAL.lnk.to/pianopieces
