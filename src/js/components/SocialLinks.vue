@@ -1,0 +1,22 @@
+
+<script>
+    export default {
+
+        props: {
+            links: {
+                type: Array,
+                default: () => [],
+            },
+        }
+
+    }
+</script>
+<template>
+    <div>
+        <ul class="socialLinks">
+            <li v-for="link in links">
+                <a class="socialLinks-link" :href="link.url">{{ link.title }}</a>
+            </li>
+        </ul>
+    </div>
+</template>

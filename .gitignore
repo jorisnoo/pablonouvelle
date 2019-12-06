@@ -1,22 +1,7 @@
-# Config
+node_modules
+/.cache
+/public
 .env
-.y7k-cli.yml
 
-# Dependencies
-/node_modules
-/vendor
-
-# nuxt
-.nuxt
-
-# Build folder
-/public/build
-/public/*
-mix-manifest.json
-
-# Uploads folder
-/public/storage
-
-# General
-.idea
-.DS_Store
+# Local Netlify folder
+/.netlify

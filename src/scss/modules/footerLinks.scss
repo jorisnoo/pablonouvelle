@@ -1,0 +1,33 @@
+//$module-name: 'footerLinks';
+//
+//@include settings((
+//
+//));
+
+.footerLinks {
+    width: 100%;
+    display: block;
+    @include font-small;
+    line-height: 1.4;
+    padding: 4em 32px 0;
+}
+
+.footerLinks-entry {
+    padding: 0;
+    list-style: none;
+    margin: 0 0 16px;
+    text-align: center;
+}
+
+.footerLinks-link {
+    text-transform: none;
+    margin-left: 20px;
+
+    @include mq($until: phablet) {
+        &:before {
+            content: ' ';
+            display: block;
+        }
+        margin-left: 0;
+    }
+}
