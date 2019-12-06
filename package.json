@@ -1,4 +1,46 @@
 {
+<<<<<<< HEAD
+  "private": true,
+  "author": {
+    "name": "Y7K",
+    "url": "https://y7k.com"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "NODE_ENV=development nuxt",
+    "watch": "nuxt",
+    "prod": "npm run production",
+    "production": "npm run generate",
+    "generate": "NODE_ENV=production nuxt generate",
+    "build": "NODE_ENV=production nuxt build"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "import-glob": "^1.5.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.0.0",
+    "axios": "^0.15.3",
+    "babel-polyfill": "^6.23.0",
+    "bugsnag-js": "^3.1.0",
+    "contentful": "^4.6.2",
+    "dialog-settings": "^1.2.0",
+    "dialog-size": "^1.3.2",
+    "lazysizes": "^3.0.0",
+    "moment": "^2.18.1",
+    "nuxt": "^1.0.0-rc11",
+    "nuxt-facebook-pixel-module": "^1.3.0",
+    "nuxt-piwik": "^0.2.4",
+    "sass-mq": "^3.3.2",
+    "susy": "^2.2.12",
+    "underscore": "^1.8.3"
+  },
+  "volta": {
+    "node": "8.6.0"
+  }
+=======
     "name": "pablonouvelle",
     "license": "proprietary",
     "private": true,
@@ -42,4 +84,5 @@
         "vue-hot-reload-api": "^2.3.4",
         "vue-template-compiler": "^2.6.10"
     }
+>>>>>>> release/1.0.0
 }
