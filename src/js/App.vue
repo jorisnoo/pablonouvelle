@@ -20,7 +20,7 @@
 
 <!--            <social-links :links="socialmedia"></social-links>-->
 
-            <footer-links :links="footer"></footer-links>
+            <footer-links></footer-links>
 
             <mountain></mountain>
 
@@ -42,7 +42,7 @@
     import { data as albums } from '../content/albums.md';
     import { data as socialmedia } from '../content/socialmedia.md';
     // import { data as music } from '../content/music.md';
-    import { data as footer } from '../content/footer.md';
+    // import { data as footer } from '../content/footer.md';
 
     export default {
         name: "App",
@@ -56,7 +56,7 @@
                 albums: JSON.parse(JSON.stringify(albums.albums)),
                 socialmedia: JSON.parse(JSON.stringify(socialmedia.socialmedia)),
                 // music: JSON.parse(JSON.stringify(data.music)),
-                footer: JSON.parse(JSON.stringify(footer.footer)),
+                // footer: JSON.parse(JSON.stringify(footer.footer)),
             }
         },
 
