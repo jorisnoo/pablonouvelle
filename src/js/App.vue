@@ -29,7 +29,6 @@
 </template>
 
 <script>
-    import axios from 'axios';
     import Album from "./components/Album";
     import FooterLinks from "./components/FooterLinks";
     import Logo from "./components/Logo";
@@ -41,6 +40,7 @@
 
     import { data as albums } from '../content/albums.md';
     import { data as socialmedia } from '../content/socialmedia.md';
+    import events from '../content/events'
     // import { data as music } from '../content/music.md';
     // import { data as footer } from '../content/footer.md';
 
@@ -52,7 +52,7 @@
 
         data() {
             return {
-                events: [],
+                events: JSON.parse(JSON.stringify(events)),
                 albums: JSON.parse(JSON.stringify(albums.albums)),
                 socialmedia: JSON.parse(JSON.stringify(socialmedia.socialmedia)),
                 // music: JSON.parse(JSON.stringify(data.music)),
@@ -61,11 +61,12 @@
         },
 
         created() {
-            axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.BANDSINTOWN_APP_ID)
-            .then(result => result.data)
-            .then(events => {
-                this.events = events;
-            });
+            // axios.get('https://rest.bandsintown.com/artists/Pablo Nouvelle/events?app_id=' + process.env.BANDSINTOWN_APP_ID)
+            // .then(result => result.data)
+            // .then(events => {
+            //     this.events = events;
+            // });
+            // console.log(events);
         },
 
     }
