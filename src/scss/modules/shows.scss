@@ -34,7 +34,6 @@
     @include font-huge;
     display: block;
     @include mq($from: phablet) {
-        white-space: nowrap;
-        display: inline;
+        display: inline-block;
     }
 }
