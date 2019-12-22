@@ -45,7 +45,7 @@
                 class="shows-entry"
             >
                 <a :href="event.url" class="shows-link" target="_blank">
-                    {{ event.datetime | date }} <span class="shows-venue">{{ event.venue.name }}</span> {{ event.venue.city }} {{ dater }}
+                    {{ event.datetime | date }} <span class="shows-venue">{{ event.venue.name }}</span> {{ event.venue.city }}
                 </a>
             </li>
         </ul>
