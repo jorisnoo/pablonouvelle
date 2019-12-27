@@ -1,8 +1,8 @@
 name: Fetch Bandsintown Events
 
-on:
-    schedule:
-        -   cron:  '0 5 * * *'
+on: push
+#    schedule:
+#        -   cron:  '0 5 * * *'
 
 jobs:
     fetch:
@@ -12,17 +12,11 @@ jobs:
         steps:
             -   uses: actions/checkout@v2
 
-            -   name: Download events
-                uses: wei/wget@v1
-                with:
-                    args: -O src/content/events.json https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}
-
-            -   name: Install xmllint
-                run: sudo apt-get install jq
+            -   name: Install curl and jq
+                run: sudo apt-get install curl jq
 
             -   name: Parse events.json file
-                run: cat src/content/events.json | jq ".[] | {url, datetime, venue}" -c > src/content/events.json
-
+                run: curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq ".[] | {url, datetime, venue}" -c > src/content/events.json
 
             -   name: Extract branch name
                 shell: bash
