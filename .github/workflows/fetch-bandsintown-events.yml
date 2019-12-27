@@ -2,20 +2,18 @@ name: Fetch Bandsintown Events
 
 on:
     schedule:
-        - cron:  '0 5 * * *'
+        -   cron:  '0 5 * * *'
 
 jobs:
-    build:
+    fetch:
 
         runs-on: ubuntu-latest
 
         steps:
             -   uses: actions/checkout@v2
 
-            -   name: Download events
-                uses: wei/wget@v1
-                with:
-                    args: -O src/content/events.json https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}
+            -   name: Parse events.json file
+                run: curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq ".[] | {url, datetime, venue}" -c > src/content/events.json
 
             -   name: Extract branch name
                 shell: bash
