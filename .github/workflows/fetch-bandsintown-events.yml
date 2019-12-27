@@ -13,7 +13,7 @@ jobs:
             -   uses: actions/checkout@v2
 
             -   name: Parse events.json file
-                run: curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq "[.[] | {url, datetime, venue: {name: .venue.name, city: .venue.city}}]" -c > src/content/events.json
+                run: "curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq '[.[] | {url, datetime, venue: {name: .venue.name, city: .venue.city}}]' -c > src/content/events.json"
 
             -   name: Extract branch name
                 shell: bash
