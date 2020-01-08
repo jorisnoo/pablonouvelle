@@ -1,12 +1,12 @@
 name: Run Eslint
 
-#on:
-#    push:
-#        branches:
-#            - master
-#        paths:
-#            - '**.js'
-#            - '**.vue'
+on:
+    push:
+        branches:
+            - master
+        paths:
+            - '**.js'
+            - '**.vue'
 
 jobs:
     eslint:
