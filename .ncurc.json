@@ -1,0 +1,6 @@
+{
+    "reject": [
+        "sass-mq",
+        "susy"
+    ]
+}
