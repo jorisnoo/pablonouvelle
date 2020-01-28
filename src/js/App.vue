@@ -5,7 +5,7 @@
 
             <logo />
 
-            <shows :events="events" />
+            <shows :events="events"/>
 
             <album
                 v-for="album in albums"
@@ -19,9 +19,9 @@
 
             <!--            <social-links :links="socialmedia"></social-links>-->
 
-            <footer-links />
+            <footer-links/>
 
-            <mountain />
+            <mountain/>
         </div>
     </section>
 </template>
@@ -36,8 +36,8 @@
     import ExternalLogos from "./components/ExternalLogos";
     // import SpotifyLinks from "./components/SpotifyLinks";
 
-    import { data as albums } from '../content/albums.md';
-    import { data as socialmedia } from '../content/socialmedia.md';
+    import {data as albums} from '../content/albums.md';
+    import {data as socialmedia} from '../content/socialmedia.md';
     import events from '../content/events';
     // import { data as music } from '../content/music.md';
     // import { data as footer } from '../content/footer.md';
