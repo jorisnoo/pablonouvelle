@@ -5,7 +5,7 @@
 
             <logo />
 
-            <shows :events="events"/>
+            <shows :events="events" />
 
             <album
                 v-for="album in albums"
@@ -19,9 +19,9 @@
 
             <!--            <social-links :links="socialmedia"></social-links>-->
 
-            <footer-links/>
+            <footer-links />
 
-            <mountain/>
+            <mountain />
         </div>
     </section>
 </template>
