@@ -1,9 +1,10 @@
 name: Release
 
-#on:
-#    push:
-#        branches:
-#            - master
+on:
+    push:
+        branches:
+            - master
+
 jobs:
     release:
         name: Release
@@ -11,6 +12,8 @@ jobs:
         steps:
             -   name: Checkout
                 uses: actions/checkout@v1
+#                Disable
+                if: false
 
             -   name: Cache node modules
                 uses: actions/cache@v1
