@@ -1,5 +1,8 @@
 ---
 albums: 
+    - name: Eliso Lyamu Katata
+      cover: 08_eliso_lyamu_katata.jpg
+      link: https://lnk.to/ElisoEP
     - name: Atlas Internet Cafe
       cover: 07_atlas_internet_cafe.jpg
       link: https://pablonouvelle.lnk.to/AIC
