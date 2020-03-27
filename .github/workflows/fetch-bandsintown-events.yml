@@ -1,6 +1,7 @@
 name: Fetch Bandsintown Events
 
 on:
+    push:
     schedule:
         -   cron:  '0 5 * * *'
 
