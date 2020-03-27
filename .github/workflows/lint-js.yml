@@ -1,47 +1,52 @@
 name: Run Eslint
 
 on:
-    push:
-        branches:
-            - master
-        paths:
-            - '**.js'
-            - '**.vue'
+  push:
+    branches:
+      - master
+    paths:
+      - '**.js'
+      - '**.vue'
 
 jobs:
-    eslint:
-        runs-on: ubuntu-latest
+  eslint:
+    runs-on: ubuntu-latest
 
-        steps:
-            -   uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
 
-#            -   name: Read node version
-#                id: node_version
-#                run: echo "##[set-output name=nvmrc;]$(cat .nvmrc)"
-#
-#            -   name: Install node and npm
-#                uses: actions/setup-node@v1
-#                with:
-#                    node-version: ${{ steps.node_version.outputs.nvmrc }}
+      #            -   name: Read node version
+      #                id: node_version
+      #                run: echo "##[set-output name=nvmrc;]$(cat .nvmrc)"
+      #
+      #            -   name: Install node and npm
+      #                uses: actions/setup-node@v1
+      #                with:
+      #                    node-version: ${{ steps.node_version.outputs.nvmrc }}
 
-            -   name: Cache node modules
-                uses: actions/cache@v1
-                with:
-                    path: ~/.npm
-                    key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-                    restore-keys: |
-                        ${{ runner.os }}-npm-
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
 
-            -   name: Install npm dependencies
-                run: npm ci
+      - name: Install npm dependencies
+        run: npm ci
 
-            -   name: Run eslint
-                run: npm run lint-fix
+      - name: Run eslint
+        run: npm run lint-fix
 
-            -   uses: stefanzweifel/git-auto-commit-action@v2.5.0
-                with:
-                    commit_message: "Chore: Lint JavaScript and Vue files"
-                    branch: master
-                env:
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract branch name
+        id: extract_branch
+        uses: ypicard/get-branch-name-github-action@v1
+
+      - name: Commit changed files
+        uses: stefanzweifel/git-auto-commit-action@v4.1.1
+        with:
+          commit_message: "Chore: Lint JavaScript and Vue files"
+          branch: ${{ steps.extract_branch.outputs.branch }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

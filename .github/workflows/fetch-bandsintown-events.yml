@@ -1,31 +1,32 @@
 name: Fetch Bandsintown Events
 
 on:
-    push:
-    schedule:
-        -   cron:  '0 5 * * *'
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '0 */8 * * *'
 
 jobs:
-    fetch:
+  fetch:
+    name: Fetch Events from Bandsintown
+    runs-on: ubuntu-latest
 
-        runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-        steps:
-            -   uses: actions/checkout@v2
+      - name: Parse events.json file
+        run: "curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq '[.[] | {url, datetime, venue: {name: .venue.name, city: .venue.city}}]' -c > src/content/events.json"
 
-            -   name: Parse events.json file
-                run: "curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq '[.[] | {url, datetime, venue: {name: .venue.name, city: .venue.city}}]' -c > src/content/events.json"
+      - name: Extract branch name
+        id: extract_branch
+        uses: ypicard/get-branch-name-github-action@v1
 
-            -   name: Extract branch name
-                shell: bash
-                run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-                id: extract_branch
-
-            -   name: Commit changed files
-                uses: stefanzweifel/git-auto-commit-action@v2.5.0
-                with:
-                    commit_message: Update Events
-                    branch: ${{ steps.extract_branch.outputs.branch }}
-                    file_pattern: src/content/events.json
-                env:
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changed files
+        uses: stefanzweifel/git-auto-commit-action@v4.1.1
+        with:
+          commit_message: Update Events
+          branch: ${{ steps.extract_branch.outputs.branch }}
+          file_pattern: src/content/events.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
