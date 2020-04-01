@@ -1,5 +1,8 @@
 ---
 albums: 
+    - name: Obsolete
+      cover: 09_obsolete.jpg
+      link: https://pablonouvelle.lnk.to/ObsoletePR
     - name: Eliso Lyamu Katata
       cover: 08_eliso_lyamu_katata.jpg
       link: https://lnk.to/ElisoEP
