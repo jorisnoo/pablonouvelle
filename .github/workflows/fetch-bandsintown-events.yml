@@ -15,15 +15,7 @@ jobs:
       - name: Parse events.json file
         run: "curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq '[.[] | {url, datetime, venue: {name: .venue.name, city: .venue.city}}]' -c > src/content/events.json"
 
-      - name: Extract branch name
-        id: extract_branch
-        uses: ypicard/get-branch-name-github-action@v1
-
-      - name: Commit changed files
-        uses: stefanzweifel/git-auto-commit-action@v4.1.1
+      - uses: stefanzweifel/git-auto-commit-action@v4.1.6
         with:
           commit_message: Update Events
-          branch: ${{ steps.extract_branch.outputs.branch }}
           file_pattern: src/content/events.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
