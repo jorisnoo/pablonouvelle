@@ -29,7 +29,7 @@
             <li class="footerLinks-entry">
                 Website By
                 <a
-                    href="mailto:joris@noordermeer.ch"
+                    href="https://www.noordermeer.ch"
                     target="_blank"
                     class="footerLinks-link"
                 >Joris Noordermeer (Code)</a>
