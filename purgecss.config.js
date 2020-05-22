@@ -10,7 +10,7 @@ module.exports = {
         /-leave-active$/,
         /-enter$/,
         /-leave-to$/,
-        /^externalLogos-entry-/
+        /^externalLogos-entry-/,
     ],
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
 };
