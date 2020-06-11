@@ -15,7 +15,7 @@ jobs:
       - name: Parse events.json file
         run: "curl 'https://rest.bandsintown.com/artists/pablo%20nouvelle/events?app_id=${{ secrets.BANDINTOWN_APP_ID }}' | jq '[.[] | {url, datetime, venue: {name: .venue.name, city: .venue.city}}]' -c > src/content/events.json"
 
-      - uses: stefanzweifel/git-auto-commit-action@v4.1.6
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Events
           file_pattern: src/content/events.json

@@ -15,6 +15,7 @@ module.exports = {
         'indent': ['error', 4, {"SwitchCase": 1}],
         'no-console': 'warn',
         "comma-dangle": ["error", "always-multiline"],
+        'quotes': ['error', 'single', { 'avoidEscape': true }],
         "vue/comma-dangle": ["error", "always-multiline"],
         'vue/script-indent': ['error', 4, {'baseIndent': 1, "switchCase": 1}],
         'vue/html-indent': ['error', 4],
