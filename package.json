@@ -28,22 +28,22 @@
     "dependencies": {
         "dialog-size": "^2.0.0",
         "lazysizes": "^5.2.2",
-        "moment": "^2.26.0",
+        "moment": "^2.27.0",
         "sass-mq": "^3.3.2",
         "susy": "^2.2.14",
         "vue": "^2.6.11"
     },
     "devDependencies": {
-        "@vue/component-compiler-utils": "^3.1.2",
+        "@vue/component-compiler-utils": "^3.2.0",
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.2.0",
+        "eslint": "^7.6.0",
         "eslint-plugin-vue": "^6.2.2",
-        "marked": "^1.1.0",
+        "marked": "^1.1.1",
         "parcel-bundler": "^1.12.4",
-        "parcel-plugin-md-fm": "^0.5.4",
+        "parcel-plugin-md-fm": "^0.5.9",
         "parcel-plugin-purgecss": "^3.0.0",
-        "parcel-plugin-static-files-copy": "^2.4.3",
-        "sass": "^1.26.8",
+        "parcel-plugin-static-files-copy": "^2.5.0",
+        "sass": "^1.26.10",
         "vue-hot-reload-api": "^2.3.4",
         "vue-template-compiler": "^2.6.11"
     }
