@@ -15,8 +15,8 @@
         "dev": "parcel src/index.html -d public",
         "generate": "parcel build src/index.html -d public",
         "watch": "parcel watch src/index.html -d public",
-        "lint": "eslint --ext .js,.vue .",
-        "lint-fix": "eslint --fix --ext .js,.vue .",
+        "test:lint": "eslint --ext .js,.vue .",
+        "lint": "eslint --fix --ext .js,.vue .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "staticFiles": {

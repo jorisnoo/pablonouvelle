@@ -12,12 +12,23 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-      -   uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      -   uses: bahmutov/npm-install@v1
+      - uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
-      -   run: npm run lint-fix
+      - run: npm ci
 
-      -   uses: stefanzweifel/git-auto-commit-action@v4.1.6
-          with:
-            commit_message: "Chore: Lint JavaScript and Vue files"
+      - run: npm run lint
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Chore: Lint JavaScript and Vue files"
