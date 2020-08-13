@@ -3,7 +3,7 @@ name: Run Eslint
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - '**.js'
       - '**.vue'
