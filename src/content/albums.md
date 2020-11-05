@@ -1,5 +1,8 @@
 ---
 albums: 
+    - name: Manor House
+      cover: 10_manor_house.jpg
+      link: https://linktr.ee/manorhouse
     - name: Obsolete
       cover: 09_obsolete.jpg
       link: https://pablonouvelle.lnk.to/ObsoletePR
