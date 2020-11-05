@@ -1,3 +1,14 @@
+<script>
+export default {
+    props: {
+        links: {
+            type: Array,
+            default: () => [],
+        },
+    },
+};
+</script>
+
 <template>
     <div>
         <ul class="externalLogos">
@@ -18,16 +29,4 @@
     </div>
 </template>
 
-<script>
-    export default {
-
-        props: {
-            links: {
-                type: Array,
-                default: () => [],
-            },
-        },
-
-    };
-</script>
 
