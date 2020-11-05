@@ -12,10 +12,10 @@
                     rel="noopener"
                 >www.considerpablo.com</a>
                 <a
-                    href="mailto:contact@pablonouvelle.com"
+                    href="mailto:contact@considerpablo.com"
                     class="footerLinks-link"
                     rel="noopener"
-                >contact@pablonouvelle.com</a>
+                >contact@considerpablo.com</a>
             </li>
             <li class="footerLinks-entry">
                 Booking
