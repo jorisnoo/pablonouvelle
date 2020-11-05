@@ -27,10 +27,10 @@
             </li>
             <li class="footerLinks-entry">
                 Management <a
-                href="mailto:rene.renner@lmeworldwide.com"
-                class="footerLinks-link"
-                rel="noopener"
-            >rene.renner@lmeworldwide.com</a>
+                    href="mailto:rene.renner@lmeworldwide.com"
+                    class="footerLinks-link"
+                    rel="noopener"
+                >rene.renner@lmeworldwide.com</a>
             </li>
             <li class="footerLinks-entry">
                 Website By

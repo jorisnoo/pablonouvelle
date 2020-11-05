@@ -1,12 +1,12 @@
 <script>
-export default {
-    props: {
-        links: {
-            type: Array,
-            default: () => [],
+    export default {
+        props: {
+            links: {
+                type: Array,
+                default: () => [],
+            },
         },
-    },
-};
+    };
 </script>
 
 <template>
