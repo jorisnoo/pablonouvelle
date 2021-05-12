@@ -19,3 +19,4 @@ jobs:
         with:
           commit_message: Update Events
           file_pattern: src/content/events.json
+          commit_author: GitHub Actions <actions@github.com>
