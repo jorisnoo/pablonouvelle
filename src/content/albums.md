@@ -1,5 +1,8 @@
 ---
 albums: 
+    - name: Dime (EP)
+      cover: 11_dime.jpg
+      link: https://aree174.lnk.to/DimeEP
     - name: Manor House
       cover: 10_manor_house.jpg
       link: https://linktr.ee/manorhouse
