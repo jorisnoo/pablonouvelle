@@ -27,12 +27,12 @@
         >
             <img
                 data-sizes="auto"
-                :data-src="'/images/album/' + cover + '?nf_resize=fit&w=640'"
+                :data-src="cover + '?nf_resize=fit&w=640'"
                 :data-srcset="
-                    '/images/album/' + cover + '?nf_resize=fit&w=960 960w, ' +
-                        '/images/album/' + cover + '?nf_resize=fit&w=640 640w, ' +
-                        '/images/album/' + cover + '?nf_resize=fit&w=480 480w, ' +
-                        '/images/album/' + cover + '?nf_resize=fit&w=320 320w'
+                    cover + '?nf_resize=fit&w=960 960w, ' +
+                        cover + '?nf_resize=fit&w=640 640w, ' +
+                        cover + '?nf_resize=fit&w=480 480w, ' +
+                        cover + '?nf_resize=fit&w=320 320w'
                 "
                 class="lazyload"
                 :alt="name"
