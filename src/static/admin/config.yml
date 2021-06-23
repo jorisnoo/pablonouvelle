@@ -14,7 +14,7 @@ slug:
   sanitize_replacement: "-"
 
 collections:
-  - label: "Releases"
+  - label: "Content"
     name: "content"
     files:
       - label: "Releases"
@@ -23,7 +23,7 @@ collections:
         editor:
           preview: false
         fields:
-          - label: Release
+          - label: Releases
             label_singular: Release
             name: albums
             widget: list
