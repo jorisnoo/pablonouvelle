@@ -20,7 +20,7 @@
         data() {
             return {
                 events: JSON.parse(JSON.stringify(events)),
-                albums: JSON.parse(JSON.stringify(albums.albums)),
+                albums: JSON.parse(JSON.stringify(albums.albums)).reverse(),
                 socialmedia: JSON.parse(JSON.stringify(socialmedia.socialmedia)),
             };
         },
