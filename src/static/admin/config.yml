@@ -1,3 +1,32 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: "https://www.pablonouvelle.com/.netlify/identity"
+  gateway_url: "https://www.pablonouvelle.com/.netlify/git/github"
+  squash_merges: true
+
+media_folder: "static/images"
+public_folder: "/images"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - label: "Releases"
+    name: "releases"
+    files:
+      - label: "Releases"
+        files: "src/content/albums.md"
+        editor:
+          preview: false
+        fields:
+          - label: Release
+            label_singular: Release
+            name: album
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Cover, name: cover, widget: image, allow_multiple: false }
+              - { label: Link, name: link, widget: string }
