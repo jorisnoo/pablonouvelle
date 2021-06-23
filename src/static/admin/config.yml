@@ -15,10 +15,11 @@ slug:
 
 collections:
   - label: "Releases"
-    name: "releases"
+    name: "content"
     files:
       - label: "Releases"
-        files: "src/content/albums.md"
+        name: "releases"
+        file: "src/content/albums.md"
         editor:
           preview: false
         fields:
