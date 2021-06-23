@@ -33,7 +33,4 @@ albums:
   - name: Pablo Nouvelle
     cover: /images/album/01_pablo_nouvelle.jpg
     link: https://pablonouvelle.bandcamp.com/album/pablo-nouvelle-2
-  - name: Tesz
-    cover: /images/album/06_piano_pieces.png
-    link: https://noordermeer.ch
 ---
