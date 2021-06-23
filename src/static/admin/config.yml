@@ -5,7 +5,7 @@ backend:
   gateway_url: "https://www.pablonouvelle.com/.netlify/git/github"
   squash_merges: true
 
-media_folder: "static/images/album"
+media_folder: "src/static/images/album"
 public_folder: "/images/album"
 
 slug:
