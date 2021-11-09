@@ -1,14 +1,18 @@
 module.exports = {
     root: true,
     env: {
+        browser: true,
         node: true,
+    },
+    parserOptions: {
+        parser: '@babel/eslint-parser',
+        requireConfigFile: false,
     },
     extends: [
         'plugin:vue/recommended',
         'eslint:recommended',
     ],
     plugins: [
-        'vue',
     ],
     rules: {
         'semi': ['error', 'always'],
@@ -34,8 +38,5 @@ module.exports = {
     ],
     'globals': {
         'Vue': 'readonly',
-    },
-    parserOptions: {
-        parser: 'babel-eslint',
     },
 };

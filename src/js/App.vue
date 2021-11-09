@@ -9,8 +9,8 @@
     import ExternalLogos from './components/ExternalLogos';
     // import SpotifyLinks from "./components/SpotifyLinks";
 
-    import {data as albums} from '../content/albums.md';
-    import {data as socialmedia} from '../content/socialmedia.md';
+    import {data as albums} from '../content/albums.json';
+    import {data as socialmedia} from '../content/socialmedia.json';
     import events from '../content/events';
 
     export default {

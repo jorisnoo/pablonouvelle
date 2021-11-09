@@ -6,13 +6,11 @@
  * This is the manifest file.
  */
 
-// LIBRARIES
 @import "../../node_modules/dialog-size/dist/dialog-size";
 //@import "../../node_modules/dialog-settings/dist/dialog-settings";
 @import "../../node_modules/sass-mq/mq";
 @import "../../node_modules/susy/sass/susy";
 
-// SETTINGS
 @import "settings/breakpoints";
 @import "settings/colors";
 @import "settings/dialog-sizes";
@@ -24,7 +22,6 @@
 @import "settings/typo";
 @import "settings/z-indexes";
 
-// TOOLS
 @import "tools/aspect-ratio";
 @import "tools/clearfix";
 @import "tools/container";
@@ -40,7 +37,6 @@
 @import "tools/unlink";
 @import "tools/z-index";
 
-// GENERIC
 @import "generic/box-sizing";
 @import "generic/normalize";
 @import "generic/reset";
@@ -48,15 +44,12 @@
 @import "generic/fonts";
 @import "generic/print";
 
-// ELEMENTS
 @import "elements/cloak";
 @import "elements/images";
 @import "elements/links";
 @import "elements/outline";
 @import "elements/tables";
 
-
-// MODULES
 @import "modules/album";
 @import "modules/footerLinks";
 @import "modules/logo";
@@ -66,12 +59,9 @@
 @import "modules/externalLogos";
 @import "modules/spotifyLinks";
 
-
-// UTILITIES
 @import "utilities/clearfix";
 @import "utilities/containers";
 @import "utilities/headings";
 @import "utilities/hide";
 
-// SHAME ON YOU
 @import "hacks/shame";
