@@ -1,4 +1,3 @@
-
 <script>
     import Album from './components/Album';
     import FooterLinks from './components/FooterLinks';
@@ -6,7 +5,6 @@
     import Mountain from './components/Mountain';
     import Shows from './components/Shows';
     // import SocialLinks from "./components/SocialLinks";
-    import ExternalLogos from './components/ExternalLogos';
     // import SpotifyLinks from "./components/SpotifyLinks";
 
     import {data as albums} from '../content/albums.json';

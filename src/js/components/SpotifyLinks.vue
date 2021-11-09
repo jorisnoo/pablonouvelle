@@ -1,18 +1,13 @@
-
-
 <script>
     export default {
-
         props: {
             links: {
                 type: Array,
                 default: () => [],
             },
         },
-
     };
 </script>
-
 <template>
     <div class="spotifyLinks">
         <div

@@ -1,5 +1,5 @@
 <script>
-    import moment from 'moment';
+    // import moment from 'moment';
     // import _ from 'underscore';
 
     export default {
@@ -13,7 +13,8 @@
         filters: {
             date: function (value) {
                 if (!value) return '';
-                return moment(value).format('ddd D MMM');
+                return value;
+                // return moment(value).format('ddd D MMM');
             },
         },
 

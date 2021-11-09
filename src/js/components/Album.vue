@@ -1,6 +1,5 @@
 <script>
     export default {
-
         props: {
             link: {
                 type: String,
@@ -15,7 +14,6 @@
                 default: () => '',
             },
         },
-
     };
 </script>
 <template>
