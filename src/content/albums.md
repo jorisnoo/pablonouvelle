@@ -33,4 +33,7 @@ albums:
   - name: Dime (EP)
     cover: /images/album/11_dime.jpg
     link: https://aree174.lnk.to/DimeEP
+  - name: Stones & Geysers
+    cover: /images/album/stones-geysers-3000x3000.jpg
+    link: https://bfan.link/stones-geysers
 ---
