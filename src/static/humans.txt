@@ -4,7 +4,7 @@
 
 # TEAM
 
-    - Ruben Feurer (Design)       https://rubenfeurer.ch/
+    - Ruben Feurer (Design)       https://rubenfeurer.com/
     - Joris Noordermeer (Code)    https://noordermeer.ch/
 
 # TECHNOLOGY
