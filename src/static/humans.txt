@@ -1,0 +1,13 @@
+   (\_/)
+  (='.'=)
+  (")^(")
+
+# TEAM
+
+    - Ruben Feurer (Design)       https://rubenfeurer.ch/
+    - Joris Noordermeer (Code)    https://noordermeer.ch/
+
+# TECHNOLOGY
+
+    Parcel, Vue.js, Scss, ESLint, PurgeCSS
+    GitHub Actions, Netlify, Netlify Large Media, Netlify CMS
