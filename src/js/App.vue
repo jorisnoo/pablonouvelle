@@ -4,12 +4,13 @@
     import Logo from './components/Logo';
     import Mountain from './components/Mountain';
     import Shows from './components/Shows';
+    import ExternalLogos from './components/ExternalLogos';
     // import SocialLinks from "./components/SocialLinks";
     // import SpotifyLinks from "./components/SpotifyLinks";
 
-    import {data as albums} from '../content/albums.json';
-    import {data as socialmedia} from '../content/socialmedia.json';
-    import events from '../content/events';
+    import albums from '../content/albums.json';
+    import socialmedia from '../content/socialmedia.json';
+    import events from '../content/events.json';
 
     export default {
         components: {
@@ -18,8 +19,8 @@
         data() {
             return {
                 events: JSON.parse(JSON.stringify(events)),
-                albums: JSON.parse(JSON.stringify(albums.albums)).reverse(),
-                socialmedia: JSON.parse(JSON.stringify(socialmedia.socialmedia)),
+                albums: JSON.parse(JSON.stringify(albums)).reverse(),
+                socialmedia: JSON.parse(JSON.stringify(socialmedia)),
             };
         },
     };
