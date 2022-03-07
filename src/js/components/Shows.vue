@@ -1,6 +1,6 @@
 <script>
-    // import moment from 'moment';
-    // import _ from 'underscore';
+    import parseISO from 'date-fns/parseISO';
+    import format from 'date-fns/format';
 
     export default {
 
@@ -13,8 +13,7 @@
         filters: {
             date: function (value) {
                 if (!value) return '';
-                return value;
-                // return moment(value).format('ddd D MMM');
+                return format(parseISO(value), 'EEE d MMM');
             },
         },
 
