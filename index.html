@@ -37,7 +37,93 @@
     <meta name="google-site-verification" content="rMjQB9Twia8xXUUdsfgNT-k9RLNY4qKR_57w2vyUlAs" />
 </head>
 <body>
-    <div id="app"></div>
+    <section class="container">
+        <div>
+            <!-- External Logos (social media) — rendered by JS -->
+            <div>
+                <ul id="externalLogos" class="externalLogos"></ul>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="/images/pablonouvelle.svg" alt="Pablo Nouvelle">
+            </div>
+
+            <!-- Shows — rendered by JS -->
+            <div>
+                <ul id="shows" class="shows"></ul>
+            </div>
+
+            <!-- Albums — rendered by JS -->
+            <div id="albums"></div>
+
+            <!-- Footer Links -->
+            <div>
+                <ul class="footerLinks">
+                    <li class="footerLinks-entry">
+                        Contact
+                    </li>
+                    <li class="footerLinks-entry">
+                        Commissioned Work
+                        <a
+                            href="https://www.considerpablo.com"
+                            class="footerLinks-link"
+                            rel="noopener"
+                        >www.considerpablo.com</a>
+                        <a
+                            href="mailto:contact@considerpablo.com"
+                            class="footerLinks-link"
+                            rel="noopener"
+                        >contact@considerpablo.com</a>
+                    </li>
+                    <li class="footerLinks-entry">
+                        Booking
+                        <a
+                            href="mailto:kilian@orangepeel-agency.ch"
+                            class="footerLinks-link"
+                            rel="noopener"
+                        >kilian@orangepeel-agency.ch</a>
+                    </li>
+                    <li class="footerLinks-entry">
+                        Management
+                        <a
+                            href="mailto:rene.renner@lmeworldwide.com"
+                            class="footerLinks-link"
+                            rel="noopener"
+                        >rene.renner@lmeworldwide.com</a>
+                    </li>
+                    <li class="footerLinks-entry">
+                        Website By
+                        <a
+                            href="https://noordermeer.ch"
+                            rel="noopener"
+                            class="footerLinks-link"
+                        >Joris Noordermeer (Code)</a>
+                        <a
+                            href="https://rubenfeurer.com"
+                            class="footerLinks-link"
+                            rel="noopener"
+                        >Ruben Feurer (Design)</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mountain -->
+            <div class="mountain">
+                <img
+                    data-sizes="auto"
+                    data-src="/images/mountain.png"
+                    data-srcset="/images/mountain.png 1142w,
+                        /images/mountain.png?nf_resize=fit&w=960 960w,
+                        /images/mountain.png?nf_resize=fit&w=640 640w,
+                        /images/mountain.png?nf_resize=fit&w=480 480w,
+                        /images/mountain.png?nf_resize=fit&w=320 320w"
+                    class="lazyload"
+                >
+            </div>
+        </div>
+    </section>
+
     <script type="module" src="/src/js/main.js"></script>
 
     <!-- Facebook Pixel Code -->
