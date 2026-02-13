@@ -5,6 +5,13 @@ import albums from '../content/albums.json';
 import events from '../content/events.json';
 import socialmedia from '../content/socialmedia.json';
 
+const IMAGEBOSS_SOURCE = 'pablonouvelle';
+const IMAGEBOSS_BASE = 'https://img.imageboss.me';
+
+function imageBossUrl(path, width) {
+    return `${IMAGEBOSS_BASE}/${IMAGEBOSS_SOURCE}/width/${width}x/format:auto${path}`;
+}
+
 function renderExternalLogos() {
     const container = document.getElementById('externalLogos');
     if (!container) return;
@@ -66,12 +73,12 @@ function renderAlbums() {
 
         const img = document.createElement('img');
         img.setAttribute('data-sizes', 'auto');
-        img.setAttribute('data-src', `${album.cover}?nf_resize=fit&w=640`);
+        img.setAttribute('data-src', imageBossUrl(album.cover, 640));
         img.setAttribute('data-srcset',
-            `${album.cover}?nf_resize=fit&w=960 960w, ` +
-            `${album.cover}?nf_resize=fit&w=640 640w, ` +
-            `${album.cover}?nf_resize=fit&w=480 480w, ` +
-            `${album.cover}?nf_resize=fit&w=320 320w`
+            `${imageBossUrl(album.cover, 960)} 960w, ` +
+            `${imageBossUrl(album.cover, 640)} 640w, ` +
+            `${imageBossUrl(album.cover, 480)} 480w, ` +
+            `${imageBossUrl(album.cover, 320)} 320w`
         );
         img.className = 'lazyload';
         img.alt = album.name;
@@ -82,6 +89,22 @@ function renderAlbums() {
     });
 }
 
+function renderMountain() {
+    const img = document.getElementById('mountainImg');
+    if (!img) return;
+
+    const path = '/images/mountain.png';
+    img.setAttribute('data-src', imageBossUrl(path, 1142));
+    img.setAttribute('data-srcset',
+        `${imageBossUrl(path, 1142)} 1142w, ` +
+        `${imageBossUrl(path, 960)} 960w, ` +
+        `${imageBossUrl(path, 640)} 640w, ` +
+        `${imageBossUrl(path, 480)} 480w, ` +
+        `${imageBossUrl(path, 320)} 320w`
+    );
+}
+
 renderExternalLogos();
 renderShows();
 renderAlbums();
+renderMountain();
