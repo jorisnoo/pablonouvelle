@@ -1,0 +1,17 @@
+---
+import { formatShowDate, getEvents } from '../lib/events';
+
+const events = await getEvents();
+---
+
+<div>
+    <ul class="shows">
+        {events.map(event => (
+            <li class="shows-entry">
+                <a href={event.url} class="shows-link" target="_blank">
+                    {formatShowDate(event.datetime)} <span class="shows-venue">{event.venue.name}</span> {event.venue.city}
+                </a>
+            </li>
+        ))}
+    </ul>
+</div>

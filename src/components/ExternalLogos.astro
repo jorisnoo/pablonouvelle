@@ -1,0 +1,16 @@
+---
+import socialmedia from '../content/socialmedia.json';
+---
+
+<div>
+    <ul class="externalLogos">
+        {socialmedia.map(link => {
+            const key = link.title.toLowerCase().replace(/ /g, '');
+            return (
+                <li class={`externalLogos-entry externalLogos-entry--${key}`}>
+                    <a class="externalLogos-link" href={link.url} target="_blank" rel="noopener" aria-label={link.title}></a>
+                </li>
+            );
+        })}
+    </ul>
+</div>

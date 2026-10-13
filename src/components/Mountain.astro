@@ -1,0 +1,8 @@
+---
+import LazyImage from './LazyImage.astro';
+import mountain from '../assets/mountain.png';
+---
+
+<div class="mountain">
+    <LazyImage src={mountain} widths={[320, 480, 640, 960, mountain.width]} />
+</div>
