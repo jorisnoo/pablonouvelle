@@ -1,0 +1,23 @@
+---
+import type { ImageMetadata } from 'astro';
+import { getImage } from 'astro:assets';
+
+interface Props {
+    src: ImageMetadata;
+    widths: number[];
+    alt?: string;
+}
+
+const { src, widths, alt = '' } = Astro.props;
+const image = await getImage({ src, widths, width: Math.min(640, src.width) });
+---
+
+<img
+    data-src={image.src}
+    data-srcset={image.srcSet.attribute}
+    data-sizes="auto"
+    width={image.attributes.width}
+    height={image.attributes.height}
+    class="lazyload"
+    alt={alt}
+>

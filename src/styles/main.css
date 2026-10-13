@@ -759,6 +759,12 @@ table {
     display: block;
     width: 100%;
     height: auto;
+    opacity: 0;
+}
+
+.album-cover img.lazyloaded {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
 
 .album-links {
@@ -850,6 +856,7 @@ table {
 .mountain img {
     max-width: 1142px;
     width: 100%;
+    height: auto;
     margin: 0 auto;
     display: block;
 }
