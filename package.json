@@ -12,16 +12,17 @@
         "url": "https://github.com/jorisnoo/pablonouvelle/issues"
     },
     "homepage": "https://pablonouvelle.com",
+    "engines": {
+        "node": ">=22.12.0"
+    },
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "events:check": "node scripts/check-events.mjs"
     },
     "dependencies": {
-        "date-fns": "^2.29.3",
-        "lazysizes": "^5.3.2"
-    },
-    "devDependencies": {
-        "vite": "^6.1.0"
+        "astro": "^7.3.8",
+        "sharp": "^0.35.5"
     }
 }

@@ -1,0 +1,29 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import albums from '../content/albums.json';
+
+const covers = import.meta.glob<{ default: ImageMetadata }>('../assets/albums/*', { eager: true });
+
+function cover(file: string): ImageMetadata {
+    const image = covers[`../assets/albums/${file}`];
+    if (!image) {
+        throw new Error(`Album cover "${file}" not found in src/assets/albums.`);
+    }
+    return image.default;
+}
+---
+
+{[...albums].reverse().map(album => (
+    <div class="album">
+        <a href={album.link} target="_blank" class="album-cover">
+            <Image
+                src={cover(album.cover)}
+                alt={album.name}
+                width={640}
+                widths={[320, 480, 640, 960, 1280]}
+                sizes="(min-width: 915px) 640px, 70vw"
+            />
+        </a>
+    </div>
+))}

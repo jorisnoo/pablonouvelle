@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import mountain from '../assets/mountain.png';
+---
+
+<div class="mountain">
+    <Image
+        src={mountain}
+        alt=""
+        widths={[480, 640, 960, mountain.width]}
+        sizes="(max-width: 599px) calc(100vw + 122px), (max-width: 1100px) calc(100vw - 100px), 1142px"
+    />
+</div>

@@ -1,87 +1,87 @@
 [
     {
         "name": "Pablo Nouvelle",
-        "cover": "/images/album/01_pablo_nouvelle.jpg",
+        "cover": "01_pablo_nouvelle.jpg",
         "link": "https://pablonouvelle.bandcamp.com/album/pablo-nouvelle-2"
     },
     {
         "name": "You Don’t Understand",
-        "cover": "/images/album/02_you_don_t_understand.jpg",
+        "cover": "02_you_don_t_understand.jpg",
         "link": "https://PabloNouvelle.lnk.to/YDU"
     },
     {
         "name": "Heartbeat",
-        "cover": "/images/album/03_heartbeat.jpg",
+        "cover": "03_heartbeat.jpg",
         "link": "https://open.spotify.com/album/1C24zCmqBSarOqUwBElLfT?si=Hu-x1IPvRKSQ--uLKBJbDA"
     },
     {
         "name": "All I Need",
-        "cover": "/images/album/04_all_i_need.jpg",
+        "cover": "04_all_i_need.jpg",
         "link": "https://ArmadaMusic.lnk.to/PNAllINeed"
     },
     {
         "name": "Wired",
-        "cover": "/images/album/05_wired.png",
+        "cover": "05_wired.png",
         "link": "https://pablonouvelle.lnk.to/Wired/"
     },
     {
         "name": "Piano Pieces",
-        "cover": "/images/album/06_piano_pieces.png",
+        "cover": "06_piano_pieces.png",
         "link": "https://AWAL.lnk.to/pianopieces"
     },
     {
         "name": "Atlas Internet Cafe",
-        "cover": "/images/album/07_atlas_internet_cafe.jpg",
+        "cover": "07_atlas_internet_cafe.jpg",
         "link": "https://pablonouvelle.lnk.to/AIC"
     },
     {
         "name": "Eliso Lyamu Katata",
-        "cover": "/images/album/08_eliso_lyamu_katata.jpg",
+        "cover": "08_eliso_lyamu_katata.jpg",
         "link": "https://lnk.to/ElisoEP"
     },
     {
         "name": "Obsolete",
-        "cover": "/images/album/09_obsolete.jpg",
+        "cover": "09_obsolete.jpg",
         "link": "https://pablonouvelle.lnk.to/ObsoletePR"
     },
     {
         "name": "Manor House",
-        "cover": "/images/album/10_manor_house.jpg",
+        "cover": "10_manor_house.jpg",
         "link": "https://linktr.ee/manorhouse"
     },
     {
         "name": "Dime (EP)",
-        "cover": "/images/album/11_dime.jpg",
+        "cover": "11_dime.jpg",
         "link": "https://aree174.lnk.to/DimeEP"
     },
     {
         "name": "Stones & Geysers",
-        "cover": "/images/album/12_stones-geysers.jpg",
+        "cover": "12_stones-geysers.jpg",
         "link": "https://bfan.link/stones-geysers"
     },
     {
         "name": "Vulnerability",
-        "cover": "/images/album/13_vulnerability.jpg",
+        "cover": "13_vulnerability.jpg",
         "link": "https://pablonouvelle.lnk.to/Vulnerability"
     },
     {
         "name": "Embrace",
-        "cover": "/images/album/14_embrace.jpg",
+        "cover": "14_embrace.jpg",
         "link": "https://lnk.to/nn-embrace"
     },
     {
         "name": "Mindblow OST",
-        "cover": "/images/album/15_mindblow.png",
+        "cover": "15_mindblow.png",
         "link": "https://music.imusician.pro/a/pxoz5e3R"
     },
     {
         "name": "Piano Pieces II",
-        "cover": "/images/album/16_piano_pieces_2.jpg",
+        "cover": "16_piano_pieces_2.jpg",
         "link": "https://lnk.site/piano-pieces-ii"
     },
     {
         "name": "2025",
-        "cover": "/images/album/17_2025.jpg",
+        "cover": "17_2025.jpg",
         "link": "https://pablonouvelle.lnk.to/2025"
     }
 ]
